@@ -1,0 +1,48 @@
+/* Importing Google Font - Inter */
+
+.intro {
+    background: white;
+    color: #143156; /* Makes text dark blue */
+    font-family: 'Inter', sans-serif; /* Applying Google Font here */
+    font-size: 20px;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: row; /* Changed from column to row */
+    align-items: center;
+    justify-content: center;
+    background: #1D1E23;
+    padding: 20px; /* Add padding to ensure content is not sticking to the edges */
+}
+
+h1 {
+    text-align: left; /* Align text to the left */
+    color: #143156;
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif; /* Applying Google Font here */
+    font-weight: 600;
+    margin-left: 20px; /* Space between the logo and text */
+}
+
+h1 span {
+    color: #BD53ED;
+    position: relative;
+}
+
+h1 span::before {
+    content: "";
+    height: 30px;
+    width: 2px;
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    background: #BD53ED;
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0 }
+}

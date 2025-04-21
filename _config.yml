@@ -25,7 +25,7 @@ author:
   avatar           : "profile.png"
   name             : "Overview"
   pronouns         : # example: "she/her"  
-  bio              : "I'm a certified electrical engineer and PhD student under Raphaël Pestourie at Georgia Tech, researching efficient modeling and simulation of PDE-based systems—primarily in optics—to enable the design of lenses, waveguides, and antennas.""
+  bio              : "I'm a certified electrical engineer and PhD student under Raphaël Pestourie at Georgia Tech, researching efficient modeling and simulation of PDE-based systems—primarily in optics—to enable the design of lenses, waveguides, and antennas."
   location         : "Atlanta, Georgia USA"
   employer         : "Georgia Institute of Technology"
   uri              : # URL

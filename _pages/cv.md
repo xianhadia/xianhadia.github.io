@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,12 +9,16 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Computational Science and Engineering, Georgia Institute of Technology, 2024 - Now (in progress), 4.0 / 4.0 GPA
-* M.S. in Computer Science, Georgia Institute of Technology, 2022-2024, 4.0 / 4.0 GPA
-* B.S. in Electrical Engineering, Mississippi College, 2017-2021, 4.0 / 4.0 GPA
+## Education
 
-Work experience
-======
-(Under Construction)
+- **Georgia Institute of Technology**  
+  *PhD in Computational Science and Engineering* — GPA: 4.0 / 4.0  
+  *2024 – Present*
+
+- **Georgia Institute of Technology**  
+  *MSCS in Computer Science* — GPA: 4.0 / 4.0  
+  *2022 – 2024*
+
+- **Mississippi College**  
+  *BSEE in Electrical Engineering* — GPA: 4.0 / 4.0  
+  *2017 – 2021*

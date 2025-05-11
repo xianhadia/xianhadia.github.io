@@ -2,72 +2,75 @@
    MASTHEAD
    ========================================================================== */
 
-.masthead {
-  position: fixed;
-  background: var(--global-bg-color);
-  height: fit-content;
-  top: 0;
-  width: 100%;
-
-  -webkit-animation: intro 0.3s both;
-          animation: intro 0.3s both;
-  -webkit-animation-delay: 0.15s;
-          animation-delay: 0.15s;
-  z-index: 20;
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    height: 1px;
-    background: var(--global-border-color);
+   .masthead {
+    position: fixed;
+    top: 0;
     width: 100%;
+    background: var(--global-bg-color);
+    -webkit-animation: intro 0.3s both;
+            animation: intro 0.3s both;
+    -webkit-animation-delay: 0.15s;
+            animation-delay: 0.15s;
+    z-index: 20;
+  
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 1px;
+      background: var(--global-border-color);
+      width: 100%;
+    }
+  
+    &__inner-wrap {
+      @include container;
+      @include clearfix;
+      padding: 0.5em 1em;
+      font-family: $sans-serif-narrow;
+  
+      /* lay out brand and nav horizontally */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      @include breakpoint($x-large) {
+        max-width: $x-large;
+      }
+  
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
   }
-
-  &__inner-wrap {
-    @include container;
-    @include clearfix;
-    padding: 0.5em 1em;
-    font-family: $sans-serif-narrow;
-
-    @include breakpoint($x-large) {
-      max-width: $x-large;
-    }
-
-    nav {
-      z-index: 10;
-    }
-
-    a {
-      text-decoration: none;
-    }
-  }
-}
-
-.masthead__menu {
-  display: flex;
-  justify-content: left;     // 👈 Center nav
-  align-items: right;
-
-  ul {
+  
+  .masthead__menu {
+    /* always show menu items in a row */
     display: flex;
-    justify-content: right;   // 👈 Center the list items
-    align-items: right;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+  
+  .masthead__menu-item {
     margin: 0;
-    padding: 0;
-    list-style-type: none;
+    white-space: nowrap;
+  
+    /* optional “large” modifier */
+    &--lg {
+      font-weight: 700;
+    }
+  
+    a {
+      display: block;
+      padding: 0.5em 0;
+    }
   }
-}
-
-
-.masthead__menu-item {
-  background-color: var(--global-bg-color);
-  display: block;
-  list-style-type: none;
-  white-space: nowrap;
-
-  &--lg {
-    padding-right: 5em;
-    font-weight: 700;
-  }
-}
+  

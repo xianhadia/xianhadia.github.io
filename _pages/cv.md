@@ -23,11 +23,6 @@ redirect_from:
   *BSEE in Electrical Engineering* — GPA: 4.0 / 4.0  
   *2017 – 2021*
 
-
-## Certifications
-
-- EiT (Engineer in Training) Electrical & Computer Engineering
-
 ## Work History
 
 - **Corning Incorporated**  
@@ -36,8 +31,12 @@ redirect_from:
 
 - **Georgia Institute of Technology**  
   *Teaching Assistant
-  *2022 - Present
+  *2022 - Present*
 
 - **U.S. Army Corps of Engineers**  
   *Research Electrical Engineer 
-  *2017-2024
+  *2017-2024*
+
+## Certifications
+
+- EiT (Engineer in Training) Electrical & Computer Engineering

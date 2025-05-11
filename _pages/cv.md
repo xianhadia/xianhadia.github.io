@@ -12,7 +12,7 @@ redirect_from:
 ## Education
 
 - **Georgia Institute of Technology**  
-  *PhD in Computational Science and Engineering* — GPA: 4.0 / 4.0  
+  *PHD in Computational Science and Engineering* — GPA: 4.0 / 4.0  
   *2024 – Present*
 
 - **Georgia Institute of Technology**  
@@ -22,3 +22,22 @@ redirect_from:
 - **Mississippi College**  
   *BSEE in Electrical Engineering* — GPA: 4.0 / 4.0  
   *2017 – 2021*
+
+
+## Certifications
+
+- EiT (Engineer in Training) Electrical & Computer Engineering
+
+## Work History
+
+- **Corning Incorporated**  
+  *Fiber Optics Lab Intern
+  *Summer 2025*
+
+- **Georgia Institute of Technology**  
+  *Teaching Assistant
+  *2022 - Present
+
+- **U.S. Army Corps of Engineers**  
+  *Research Electrical Engineer 
+  *2017-2024

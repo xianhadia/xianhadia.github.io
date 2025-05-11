@@ -1,0 +1,8 @@
+/* Center or evenly distribute top nav links */
+.greedy-nav ul {
+  justify-content: center; /* or use space-evenly for full-width */
+}
+
+.greedy-nav ul li {
+  margin: 0 15px; /* adds spacing between menu items */
+}

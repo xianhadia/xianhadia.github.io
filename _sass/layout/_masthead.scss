@@ -45,14 +45,20 @@
 }
 
 .masthead__menu {
+  display: flex;
+  justify-content: left;     // 👈 Center nav
+  align-items: right;
 
   ul {
+    display: flex;
+    justify-content: right;   // 👈 Center the list items
+    align-items: right;
     margin: 0;
     padding: 0;
-    clear: both;
     list-style-type: none;
   }
 }
+
 
 .masthead__menu-item {
   background-color: var(--global-bg-color);
@@ -61,7 +67,7 @@
   white-space: nowrap;
 
   &--lg {
-    padding-right: 2em;
+    padding-right: 5em;
     font-weight: 700;
   }
 }

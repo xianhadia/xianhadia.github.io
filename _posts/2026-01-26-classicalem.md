@@ -7,56 +7,57 @@ tags:
   - physics
   - academic
 ---
-
 # 1. Sources
 
-The causal chain \text{source} \\longrightarrow\\ \text{field} \\longrightarrow\\ \text{observable} reflects the factorization of physics into three components: excitations (sources), propagation through a medium (determined by materials and boundary conditions), and the mapping of fields into measurable quantiites (observations). The notes within my classical electromagnetism section will follow this structure with the first section modeling sources.
+The causal chain source $\longrightarrow$ field  $\longrightarrow$ observable reflects the factorization of physics into three components: excitations (sources), propagation through a medium (determined by materials and boundary conditions), and measuring quantities (observations). The notes within my classical electromagnetism section will follow this structure with the first section modeling sources.
 
----
+
 
 ## 1.1 Maxwell’s Equations
 
-Electromagnetic fields are vector-valued functions of space and time. Using the Cartesian unit vectors \(\hat{\mathbf{x}},\hat{\mathbf{y}},\hat{\mathbf{z}}\), a generic vector field is
+Electromagnetic fields are vector-valued functions of space and time. Using the Cartesian unit vectors $\hat{\mathbf{x}},\hat{\mathbf{y}},\hat{\mathbf{z}}$, a generic vector field is written as 
 
 $$
 \mathbf{V}(x,y,z,t) = V_x\,\hat{\mathbf{x}} + V_y\,\hat{\mathbf{y}} + V_z\,\hat{\mathbf{z}}.
 $$
 
-With sources \((\rho_e,\mathbf{J})\) and \((\rho_m,\mathbf{M})\), the differential Maxwell equations are
+The electric and magnetic fields are denoted by $\mathbf{E}$ and $\mathbf{H}$, and the electric and magnetic flux densities by $\mathbf{D}$ and $\mathbf{B}$, respectively. In the presence of electric and magnetic charge and current densities $(\rho_e, \mathbf{J})$ and $(\rho_m, \mathbf{M})$, Maxwell's equations in differential form are
 
 $$
-\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} - \mathbf{M},
+\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} - \mathbf{M}
 $$
 $$
-\nabla \times \mathbf{H} = \frac{\partial \mathbf{D}}{\partial t} + \mathbf{J},
+\nabla \times \mathbf{H} = \frac{\partial \mathbf{D}}{\partial t} + \mathbf{J}
 $$
 $$
-\nabla \cdot \mathbf{D} = \rho_e,
+\nabla \cdot \mathbf{D} = \rho_e
 \quad
-\nabla \cdot \mathbf{B} = \rho_m.
+\nabla \cdot \mathbf{B} = \rho_m
 $$
 
-In integral form,
+
+
+In integral form over an oriented surface $S$ with boundary curve $\partial S$, these become
+
 
 $$
-\oint_{\partial S} \mathbf{E}\cdot d\boldsymbol{\ell}
-= -\int_S \left( \frac{\partial \mathbf{B}}{\partial t} + \mathbf{M} \right)\cdot d\mathbf{S},
-$$
-$$
-\oint_{\partial S} \mathbf{H}\cdot d\boldsymbol{\ell}
-= \int_S \left( \frac{\partial \mathbf{D}}{\partial t} + \mathbf{J} \right)\cdot d\mathbf{S},
-$$
-$$
-\int_S \mathbf{D}\cdot d\mathbf{S}
-= \int_V \rho_e\,dV,
-\quad
-\int_S \mathbf{B}\cdot d\mathbf{S}
-= \int_V \rho_m\,dV.
+\oint_{\partial S} \mathbf{E} \cdot d\boldsymbol{\ell} = - \int_{S} \left( \frac{\partial \mathbf{B}}{\partial t} + \mathbf{M} \right) \cdot d\mathbf{S}
 $$
 
-Magnetic sources have no known physical realization, but including them yields a more symmetric and duality-friendly formalism.
+$$
+\oint_{\partial S} \mathbf{H} \cdot d\boldsymbol{\ell} = \phantom{-} \int_{S} \left( \frac{\partial \mathbf{D}}{\partial t} + \mathbf{J} \right) \cdot d\mathbf{S}
+$$
 
----
+$$
+\int_{S} \mathbf{D} \cdot d\mathbf{S} = \int_{V} \rho_e\, dV
+$$
+
+$$ 
+\int_{S} \mathbf{B} \cdot d\mathbf{S} = \int_{V} \rho_m\, dV
+$$ 
+
+where $V$ is the volume enclosed by $S$. The magnetic charge densities and currents introduced above are not known to exist physically but including them now allows for symmetry within Maxwell's equations and enables later use of duality transformations.
+
 
 ## 1.2 Constitutive Relations
 
@@ -66,45 +67,40 @@ $$
 \mathbf{D} = \epsilon\,\mathbf{E}, \qquad \mathbf{B} = \mu\,\mathbf{H}, \qquad \mathbf{J} = \sigma\,\mathbf{E}.
 $$
 
-In general:
-
-- \(\epsilon,\mu,\sigma\) can be **complex-valued** (lossy media),
-- they may be **functions of space** \(\epsilon(\mathbf{r})\),
-- they may depend on **frequency** (temporal dispersion),
-- they may depend on **wavevector** (spatial dispersion).
-
-More complex media include:
+where $\epsilon$, $\mu$, and $\sigma$ are the permittivity, permeability, and conductivity of the material. In general these material parameters may be \textbf{complex-valued} with the imaginary part representing loss to the system. Additionally, we model the fields in different types of media the following way
 
 - **Nonlinear:**  
   $$
   \mathbf{P} = \epsilon_0(\chi^{(1)}\mathbf{E} + \chi^{(2)}\mathbf{E}^2 + \cdots)
   $$
-- **Anisotropic:** tensor-valued \(\epsilon\) and \(\mu\),
+- **Anisotropic:** tensor-valued $\epsilon$ and $\mu$,
 - **Bianisotropic / chiral:**  
   $$
   \mathbf{D} = \epsilon \mathbf{E} + \xi \mathbf{H}, \quad \mathbf{B} = \zeta \mathbf{E} + \mu \mathbf{H}
   $$
+ - **Dispersive media** have material parameters depending on frequency (temporal dispersion), and may also depend on wavevector (spatial dispersion), leading to convolutional constitutive laws in time or space.
 
-More detailed material models appear later; linear isotropic media suffice for many classical systems.
+ We will cover materials in a later section. For now, simple linear relationships are sufficient for many classical problems and can even account for inhomogenous media if their material properties can be written as functions space $\epsilon(\mathbf{r})$, $\mu(\mathbf{r})$, and $\sigma(\mathbf{r})$.
 
----
 
-###  Example: Field of a Point Charge (Interactive)
+
 
 <details>
-<summary><b>Click to reveal example</b></summary>
+<summary><b>Example: Field of a Point Charge</b></summary>
 
-For a point charge \(q\) at the origin:
+Consider the simplest electrostatic example: a point charge $q$ located at the origin in free space. In this case, the charge density is
 
 $$
 \rho_e(\mathbf{r}) = q\,\delta(\mathbf{r}), \quad \partial_t = 0, \quad \mathbf{J}=0.
 $$
 
-Then
+and all fields are time-independent, so that $\partial/\partial t = 0$ and $\mathbf{J} = \mathbf{0}$. Therefore, 
 
 $$
 \nabla \cdot \mathbf{D} = \rho_e, \quad \nabla \times \mathbf{E} = 0.
 $$
+
+with the relation to free space as $\mathbf{D} = \epsilon_0 \mathbf{E}$
 
 Using Gauss’s law over a sphere of radius \(R\):
 
@@ -124,11 +120,15 @@ recovering Coulomb’s law.
 
 </details>
 
----
+
+This simple example highlights two complementary routes for solving Maxwell's equations: using the integral form together with symmetry arguments, or using the differential
+form and solving the resulting partial differential equations (here, Poisson's equation for $\phi$).
+
+
 
 ## 1.3 Continuity and Charge Conservation
 
-Local charge conservation is expressed as
+Charge conservation imposes a local constraint on admissible electromagnetic fields. In differential form, the conservation of electric (and magnetic) charge is expressed through the continuity equations
 
 $$
 \nabla \cdot \mathbf{J} = -\frac{\partial \rho_e}{\partial t}.
@@ -143,16 +143,12 @@ $$
 
 Thus the charge in a region can only change via current crossing its boundary.
 
-Charge conservation is **not independent** of Maxwell’s equations:
+Charge conservation is **not independent** of Maxwell’s equations. Taking \(\nabla\cdot\) of Ampère–Maxwell and using \(\nabla\cdot\nabla\times\!\bullet=0\) plus Gauss’s law recovers the continuity equation.
 
-Taking \(\nabla\cdot\) of Ampère–Maxwell and using \(\nabla\cdot\nabla\times\!\bullet=0\) plus Gauss’s law recovers the continuity equation.
-
----
-
-###  Example: Steady Current in a Wire (Interactive)
+At a more abstract level, conservation laws arise from symmetries. In electromagnetism, global gauge invariance implies conservation of electric charge (Noether's theorem), whose local expression is precisely the continuity equation. The continuity equation in turn constrains the permissible electromagnetic fields and sources.
 
 <details>
-<summary><b>Click to reveal example</b></summary>
+<summary><b>Example: Steady Current in a Wire</b></summary>
 
 For a DC current \(I\):
 
@@ -164,11 +160,266 @@ If \(I\) changes suddenly, transient charge buildup temporarily violates \(\nabl
 
 </details>
 
----
+
+
+# 1. Sources
+
+The causal chain source $\longrightarrow$ field  $\longrightarrow$ observable reflects the factorization of physics into three components: excitations (sources), propagation through a medium (determined by materials and boundary conditions), and measuring quantities (observations). The notes within my classical electromagnetism section will follow this structure with the first section modeling sources.
+
+
+
+## 1.1 Maxwell’s Equations
+
+Electromagnetic fields are vector-valued functions of space and time. Using the Cartesian unit vectors $\hat{\mathbf{x}},\hat{\mathbf{y}},\hat{\mathbf{z}}$, a generic vector field is written as 
+
+$$
+\mathbf{V}(x,y,z,t) = V_x\,\hat{\mathbf{x}} + V_y\,\hat{\mathbf{y}} + V_z\,\hat{\mathbf{z}}.
+$$
+
+The electric and magnetic fields are denoted by $\mathbf{E}$ and $\mathbf{H}$, and the electric and magnetic flux densities by $\mathbf{D}$ and $\mathbf{B}$, respectively. In the presence of electric and magnetic charge and current densities $(\rho_e, \mathbf{J})$ and $(\rho_m, \mathbf{M})$, Maxwell's equations in differential form are
+
+$$
+\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t} - \mathbf{M}
+$$
+$$
+\nabla \times \mathbf{H} = \frac{\partial \mathbf{D}}{\partial t} + \mathbf{J}
+$$
+$$
+\nabla \cdot \mathbf{D} = \rho_e
+\quad
+\nabla \cdot \mathbf{B} = \rho_m
+$$
+
+
+
+In integral form over an oriented surface $S$ with boundary curve $\partial S$, these become
+
+
+$$
+\oint_{\partial S} \mathbf{E} \cdot d\boldsymbol{\ell} = - \int_{S} \left( \frac{\partial \mathbf{B}}{\partial t} + \mathbf{M} \right) \cdot d\mathbf{S}
+$$
+
+$$
+\oint_{\partial S} \mathbf{H} \cdot d\boldsymbol{\ell} = \phantom{-} \int_{S} \left( \frac{\partial \mathbf{D}}{\partial t} + \mathbf{J} \right) \cdot d\mathbf{S}
+$$
+
+$$
+\int_{S} \mathbf{D} \cdot d\mathbf{S} = \int_{V} \rho_e\, dV
+$$
+
+$$ 
+\int_{S} \mathbf{B} \cdot d\mathbf{S} = \int_{V} \rho_m\, dV
+$$ 
+
+where $V$ is the volume enclosed by $S$. The magnetic charge densities and currents introduced above are not known to exist physically but including them now allows for symmetry within Maxwell's equations and enables later use of duality transformations.
+
+
+## 1.2 Constitutive Relations
+
+Maxwell’s equations couple to matter through material laws:
+
+$$
+\mathbf{D} = \epsilon\,\mathbf{E}, \qquad \mathbf{B} = \mu\,\mathbf{H}, \qquad \mathbf{J} = \sigma\,\mathbf{E}.
+$$
+
+where $\epsilon$, $\mu$, and $\sigma$ are the permittivity, permeability, and conductivity of the material. In general these material parameters may be \textbf{complex-valued} with the imaginary part representing loss to the system. Additionally, we model the fields in different types of media the following way
+
+- **Nonlinear:**  
+  $$
+  \mathbf{P} = \epsilon_0(\chi^{(1)}\mathbf{E} + \chi^{(2)}\mathbf{E}^2 + \cdots)
+  $$
+- **Anisotropic:** tensor-valued $\epsilon$ and $\mu$,
+- **Bianisotropic / chiral:**  
+  $$
+  \mathbf{D} = \epsilon \mathbf{E} + \xi \mathbf{H}, \quad \mathbf{B} = \zeta \mathbf{E} + \mu \mathbf{H}
+  $$
+ - **Dispersive media** have material parameters depending on frequency (temporal dispersion), and may also depend on wavevector (spatial dispersion), leading to convolutional constitutive laws in time or space.
+
+ We will cover materials in a later section. For now, simple linear relationships are sufficient for many classical problems and can even account for inhomogenous media if their material properties can be written as functions space $\epsilon(\mathbf{r})$, $\mu(\mathbf{r})$, and $\sigma(\mathbf{r})$.
+
+
+
+
+<details>
+<summary><b>Example: Field of a Point Charge</b></summary>
+
+Consider the simplest electrostatic example: a point charge $q$ located at the origin in free space. In this case, the charge density is
+
+$$
+\rho_e(\mathbf{r}) = q\,\delta(\mathbf{r}), \quad \partial_t = 0, \quad \mathbf{J}=0.
+$$
+
+and all fields are time-independent, so that $\partial/\partial t = 0$ and $\mathbf{J} = \mathbf{0}$. Therefore, 
+
+$$
+\nabla \cdot \mathbf{D} = \rho_e, \quad \nabla \times \mathbf{E} = 0.
+$$
+
+with the relation to free space as $\mathbf{D} = \epsilon_0 \mathbf{E}$
+
+Using Gauss’s law over a sphere of radius \(R\):
+
+$$
+D_r(R)\,4\pi R^2 = q \quad \Rightarrow \quad \mathbf{E} = \frac{q}{4\pi\epsilon_0 R^2}\hat{\mathbf{r}}.
+$$
+
+Alternatively, using \(\mathbf{E}=-\nabla\phi\), Poisson’s equation gives
+
+$$
+\phi(\mathbf{r}) = \frac{q}{4\pi\epsilon_0 R},
+\quad
+\mathbf{E} = -\nabla\phi,
+$$
+
+recovering Coulomb’s law.
+
+</details>
+
+
+This simple example highlights two complementary routes for solving Maxwell's equations: using the integral form together with symmetry arguments, or using the differential
+form and solving the resulting partial differential equations (here, Poisson's equation for $\phi$).
+
+
+
+## 1.3 Continuity and Charge Conservation
+
+Charge conservation imposes a local constraint on admissible electromagnetic fields. In differential form, the conservation of electric (and magnetic) charge is expressed through the continuity equations
+
+$$
+\nabla \cdot \mathbf{J} = -\frac{\partial \rho_e}{\partial t}.
+$$
+
+Integrating over a fixed volume \(V\),
+
+$$
+\frac{d}{dt} \int_V \rho_e\,dV
+= -\oint_{\partial V} \mathbf{J}\cdot d\mathbf{S}.
+$$
+
+Thus the charge in a region can only change via current crossing its boundary.
+
+Charge conservation is **not independent** of Maxwell’s equations. Taking \(\nabla\cdot\) of Ampère–Maxwell and using \(\nabla\cdot\nabla\times\!\bullet=0\) plus Gauss’s law recovers the continuity equation.
+
+At a more abstract level, conservation laws arise from symmetries. In electromagnetism, global gauge invariance implies conservation of electric charge (Noether's theorem), whose local expression is precisely the continuity equation. The continuity equation in turn constrains the permissible electromagnetic fields and sources.
+
+<details>
+<summary><b>Example: Steady Current in a Wire</b></summary>
+
+For a DC current \(I\):
+
+$$
+\partial_t \rho_e = 0 \quad \Rightarrow\quad \nabla\cdot\mathbf{J}=0.
+$$
+
+If \(I\) changes suddenly, transient charge buildup temporarily violates \(\nabla\cdot\mathbf{J}=0\), restoring it once steady state resumes.
+
+</details>
+
 
 ## 1.4 Boundary Conditions
 
-At an interface with unit normal \(\hat{\mathbf{n}}\):
+Maxwell’s equations in differential form assume the field vectors are differentiable. However, at the interface between two different media, the material parameters ($\epsilon, \mu, \sigma$) often change abruptly. To handle this, we derive boundary conditions by applying the integral forms of Maxwell's equations to infinitesimal regions straddling the interface.
+
+Let an interface separate **Medium 1** from **Medium 2**. We define the unit normal vector $\hat{\mathbf{n}}$ to point **from Medium 2 into Medium 1** $\hat{\mathbf{n}} = \hat{\mathbf{n}}_{2 \to 1}$
+
+
+By applying Gauss's Law over a a small cylin ($\oint \mathbf{D} \cdot d\mathbf{S} = Q_{enc}$) to a small "pillbox" cylinder of height $\Delta h$ and cap area $\Delta A$ that cuts across the interface. As the height $\Delta h \to 0$, the flux through the side walls vanishes. The remaining flux comes from the top (Medium 1) and bottom (Medium 2) caps:
+
+$$
+(\mathbf{D}_1 \cdot \hat{\mathbf{n}}) \Delta A - (\mathbf{D}_2 \cdot \hat{\mathbf{n}}) \Delta A = \rho_{es} \Delta A
+$$
+
+where $\rho_{es}$ is the surface charge density. This yields the jump condition for normal components.
+
+**2. Tangential Components (Curl Equations)**
+Apply Faraday's law ($\oint \mathbf{E} \cdot d\boldsymbol{\ell} = -\frac{d}{dt}\int \mathbf{B}\cdot d\mathbf{S} - \int \mathbf{M}\cdot d\mathbf{S}$) to a rectangular loop of length $\Delta \ell$ and vanishing width straddling the boundary. As the area of the loop goes to zero, the magnetic flux term ($\mathbf{B}$) vanishes (assuming $\mathbf{B}$ is finite). The circulation of $\mathbf{E}$ and the magnetic current source $\mathbf{M}$ remain:
+
+$$
+(\mathbf{E}_1 \cdot \mathbf{t}) \Delta \ell - (\mathbf{E}_2 \cdot \mathbf{t}) \Delta \ell = -(\mathbf{M}_s \cdot \mathbf{b}) \Delta \ell
+$$
+
+where $\mathbf{t}$ is the tangent vector along the loop and $\mathbf{b}$ is the binormal. In vector notation, this generalizes to the cross product with the normal vector.
+
+### Summary of Boundary Conditions
+
+For an interface with surface electric charge $\rho_{es}$, electric current $\mathbf{J}_s$, magnetic charge $\rho_{ms}$, and magnetic current $\mathbf{M}_s$:
+
+| Component | Boundary Condition | Physical Implication |
+| :--- | :--- | :--- |
+| **Tangential E** | $\hat{\mathbf{n}} \times (\mathbf{E}_1 - \mathbf{E}_2) = -\mathbf{M}_s$ | $\mathbf{E}_{tan}$ is continuous unless magnetic current exists. |
+| **Tangential H** | $\hat{\mathbf{n}} \times (\mathbf{H}_1 - \mathbf{H}_2) = \mathbf{J}_s$ | $\mathbf{H}_{tan}$ is continuous unless electric current exists. |
+| **Normal D** | $\hat{\mathbf{n}} \cdot (\mathbf{D}_1 - \mathbf{D}_2) = \rho_{es}$ | $\mathbf{D}_{norm}$ jumps by the surface charge density. |
+| **Normal B** | $\hat{\mathbf{n}} \cdot (\mathbf{B}_1 - \mathbf{B}_2) = \rho_{ms}$ | $\mathbf{B}_{norm}$ is continuous (unless magnetic monopoles exist). |
+
+*Note: In most physical scenarios, magnetic sources $\mathbf{M}_s$ and $\rho_{ms}$ are zero. However, they are retained here for use in equivalence principles (e.g., aperture problems).*
+
+<details>
+<summary><b>Example: Field of a Magnetic Current Sheet</b></summary>
+
+This example demonstrates how to use boundary conditions to solve for unknown fields. It also highlights a scenario where the electric field is discontinuous, but the magnetic field is continuous.
+
+**Problem Setup**
+Consider free space separated into two regions by the plane $z=0$. A **magnetic surface current** flows on this interface:
+$$
+\mathbf{M}_s = M_0 \hat{\mathbf{y}} \quad \text{at } z=0
+$$
+There is **no electric surface current** ($\mathbf{J}_s = 0$). We wish to find the electromagnetic waves radiating away from this sheet.
+
+**1. Apply Conventions**
+* Interface normal $\hat{\mathbf{n}} = \hat{\mathbf{z}}$.
+* Region 1 is $z>0$; Region 2 is $z<0$.
+
+**2. Formulate Field Ansatz (Guess)**
+By symmetry, the sheet radiates plane waves traveling outward ($+z$ in Reg 1, $-z$ in Reg 2).
+* **Region 1 ($z>0$):**
+    $$\mathbf{E}_1 = E_0 \hat{\mathbf{x}} e^{-jkz} \quad \Rightarrow \quad \mathbf{H}_1 = \frac{E_0}{\eta_0} \hat{\mathbf{y}} e^{-jkz}$$
+* **Region 2 ($z<0$):**
+    $$\mathbf{E}_2 = -E_0 \hat{\mathbf{x}} e^{+jkz} \quad \Rightarrow \quad \mathbf{H}_2 = \frac{-E_0}{-\eta_0} \hat{\mathbf{y}} e^{+jkz} = \frac{E_0}{\eta_0} \hat{\mathbf{y}} e^{+jkz}$$
+    *(Note: We guessed the sign of $E_2$ to be negative, but let's verify if this satisfies the conditions).*
+
+**3. Enforce Boundary Conditions at $z=0$**
+
+* **Condition A: Magnetic Tangents ($\mathbf{J}_s = 0$)**
+    Since there is no electric current $\mathbf{J}_s$, the tangential $\mathbf{H}$ must be continuous:
+    $$
+    \hat{\mathbf{n}} \times (\mathbf{H}_1 - \mathbf{H}_2) = 0 \implies \mathbf{H}_{1, tan} = \mathbf{H}_{2, tan}
+    $$
+    At $z=0$:
+    $$
+    \frac{E_0}{\eta_0}\hat{\mathbf{y}} = \frac{E_0}{\eta_0}\hat{\mathbf{y}}
+    $$
+    This holds true. Our ansatz correctly assumes $\mathbf{H}$ is continuous.
+
+* **Condition B: Electric Tangents ($\mathbf{M}_s \neq 0$)**
+    Here, $\mathbf{M}_s$ causes a discontinuity:
+    $$
+    \hat{\mathbf{z}} \times (\mathbf{E}_1 - \mathbf{E}_2) = -\mathbf{M}_s
+    $$
+    Substitute the fields at $z=0$:
+    $$
+    \hat{\mathbf{z}} \times (E_0 \hat{\mathbf{x}} - (-E_0 \hat{\mathbf{x}})) = -M_0 \hat{\mathbf{y}}
+    $$
+    $$
+    \hat{\mathbf{z}} \times (2E_0 \hat{\mathbf{x}}) = -M_0 \hat{\mathbf{y}}
+    $$
+    Using $\hat{\mathbf{z}} \times \hat{\mathbf{x}} = \hat{\mathbf{y}}$:
+    $$
+    2E_0 \hat{\mathbf{y}} = -M_0 \hat{\mathbf{y}}
+    $$
+
+**4. Solution**
+Solving for the field amplitude:
+$$
+E_0 = -\frac{M_0}{2}
+$$
+
+Thus, the magnetic current sheet generates an electric field that "jumps" from $+M_0/2$ to $-M_0/2$ across the boundary, while the magnetic field passes through the boundary unchanged.
+
+</details>
+
+## 1.4 Boundary Conditions
+
+Let an interface separate medium 1 from medium 2, and let $\hat{\mathbf{n}}$ denote the unit normal vector pointing from region 2 into region 1. This convention fixes the sign in the jump conditions. The tangential boundary conditions follow from integrating the curl equations over an infinitesimal loop that straddles the interface. From Faraday's law,$\nabla \times \mathbf{E} = -\,\frac{\partial \mathbf{B}}{\partial t} - \mathbf{M}, $ one obtains $ \hat{\mathbf{n}} \times (\mathbf{E}_1 - \mathbf{E}_2) = -\,\mathbf{M}_s, $ where $\mathbf{M}_s$ is the magnetic surface current density. In the absence of surface currents ($\mathbf{M}_s = \mathbf{0}$), the tangential components of $\mathbf{E}$ are continuous: \[ \hat{\mathbf{n}} \times \mathbf{E}_1 = \hat{\mathbf{n}} \times \mathbf{E}_2. \]
 
 $$
 \hat{\mathbf{n}}\times(\mathbf{E}_1-\mathbf{E}_2) = -\mathbf{M}_s,
@@ -183,14 +434,10 @@ $$
 \hat{\mathbf{n}}\cdot(\mathbf{B}_1-\mathbf{B}_2) = \rho_{ms}.
 $$
 
-The sign convention always appears as *region 1 minus region 2*.
 
----
-
-###  Example: Planar Interface at \(z=0\)
 
 <details>
-<summary><b>Click to reveal example</b></summary>
+<summary><b>Example: Planar Interface at z=0 </b></summary>
 
 Let \(\hat{\mathbf{n}}=\hat{\mathbf{z}}\). Then the tangential \(E\) components satisfy
 

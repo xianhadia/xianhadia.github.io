@@ -156,31 +156,13 @@ If \(I\) changes suddenly, transient charge buildup temporarily violates \(\nabl
 
 ## 1.4 Boundary Conditions
 
-Maxwell’s equations in differential form assume the field vectors are differentiable. However, at the interface between two different media, the material parameters ($\epsilon, \mu, \sigma$) often change abruptly. To handle this, we derive boundary conditions by applying the integral forms of Maxwell's equations to infinitesimal regions straddling the interface.
+Maxwell’s equations in differential form assume the field vectors are differentiable. However, at the interface between two different media, the material parameters ($\epsilon, \mu, \sigma$) often change abruptly. To handle this (alongside the mathematical necessity of coupled PDEs requiriing certain conditions for a unique solution), we introduce boundary conditions
 
-Let an interface separate **Medium 1** from **Medium 2**. We define the unit normal vector $\hat{\mathbf{n}}$ to point **from Medium 2 into Medium 1** $\hat{\mathbf{n}} = \hat{\mathbf{n}}_{2 \to 1}$
-
-
-By applying Gauss's Law over a a small cylin ($\oint \mathbf{D} \cdot d\mathbf{S} = Q_{enc}$) to a small "pillbox" cylinder of height $\Delta h$ and cap area $\Delta A$ that cuts across the interface. As the height $\Delta h \to 0$, the flux through the side walls vanishes. The remaining flux comes from the top (Medium 1) and bottom (Medium 2) caps:
-
+Let an interface separate **Medium 1** from **Medium 2**. We define the unit normal vector $\hat{\mathbf{n}}$ to point **from Medium 2 into Medium 1**.
 $$
-(\mathbf{D}_1 \cdot \hat{\mathbf{n}}) \Delta A - (\mathbf{D}_2 \cdot \hat{\mathbf{n}}) \Delta A = \rho_{es} \Delta A
+\hat{\mathbf{n}} = \hat{\mathbf{n}}_{2 \to 1}
 $$
 
-where $\rho_{es}$ is the surface charge density. This yields the jump condition for normal components.
-
-**2. Tangential Components (Curl Equations)**
-Apply Faraday's law ($\oint \mathbf{E} \cdot d\boldsymbol{\ell} = -\frac{d}{dt}\int \mathbf{B}\cdot d\mathbf{S} - \int \mathbf{M}\cdot d\mathbf{S}$) to a rectangular loop of length $\Delta \ell$ and vanishing width straddling the boundary. As the area of the loop goes to zero, the magnetic flux term ($\mathbf{B}$) vanishes (assuming $\mathbf{B}$ is finite). The circulation of $\mathbf{E}$ and the magnetic current source $\mathbf{M}$ remain:
-
-$$
-(\mathbf{E}_1 \cdot \mathbf{t}) \Delta \ell - (\mathbf{E}_2 \cdot \mathbf{t}) \Delta \ell = -(\mathbf{M}_s \cdot \mathbf{b}) \Delta \ell
-$$
-
-where $\mathbf{t}$ is the tangent vector along the loop and $\mathbf{b}$ is the binormal. In vector notation, this generalizes to the cross product with the normal vector.
-
-### Summary of Boundary Conditions
-
-For an interface with surface electric charge $\rho_{es}$, electric current $\mathbf{J}_s$, magnetic charge $\rho_{ms}$, and magnetic current $\mathbf{M}_s$:
 
 | Component | Boundary Condition | Physical Implication |
 | :--- | :--- | :--- |
@@ -189,7 +171,11 @@ For an interface with surface electric charge $\rho_{es}$, electric current $\ma
 | **Normal D** | $\hat{\mathbf{n}} \cdot (\mathbf{D}_1 - \mathbf{D}_2) = \rho_{es}$ | $\mathbf{D}_{norm}$ jumps by the surface charge density. |
 | **Normal B** | $\hat{\mathbf{n}} \cdot (\mathbf{B}_1 - \mathbf{B}_2) = \rho_{ms}$ | $\mathbf{B}_{norm}$ is continuous (unless magnetic monopoles exist). |
 
-*Note: In most physical scenarios, magnetic sources $\mathbf{M}_s$ and $\rho_{ms}$ are zero. However, they are retained here for use in equivalence principles (e.g., aperture problems).*
+Sources enter Maxwell's theory in two distinct ways: **explicitly** as volumetric densities ($\rho, \mathbf{J}$) driving the differential equations, or **implicitly** as surface singularities ($\rho_s, \mathbf{J}_s$) enforcing discontinuities at boundaries. 
+
+In many practical electromagnetic problems, explicit volumetric sources are absent from the region of interest. Instead, the physics is driven by equivalent surface charges or currents defined at interfaces. A key skill in modeling is recognizing that these descriptions are often physically equivalent, differing only in mathematical convenience. More on this will be expanded on in the next chapter.
+
+The following example applies the boundary condition approach. It solves for the radiation from a magnetic current sheet, demonstrating how a **non-zero** source ($\mathbf{M}_s$) forces a discontinuity in the tangential electric field and the **absence** of a source ($\mathbf{J}_s = 0$) preserves continuity in the tangential magnetic field.
 
 <details>
 <summary><b>Example: Field of a Magnetic Current Sheet</b></summary>
@@ -206,6 +192,7 @@ There is **no electric surface current** ($\mathbf{J}_s = 0$). We wish to find t
 **1. Apply Conventions**
 * Interface normal $\hat{\mathbf{n}} = \hat{\mathbf{z}}$.
 * Region 1 is $z>0$; Region 2 is $z<0$.
+* (note: one could easily have chosen $\hat{\mathbf{n}} = \hat{\mathbf{-z}}$ since it is also normal to the interface; however, subsequent signs would also have vto be revised to keep consistent with this normal vector choice.
 
 **2. Formulate Field Ansatz (Guess)**
 By symmetry, the sheet radiates plane waves traveling outward ($+z$ in Reg 1, $-z$ in Reg 2).
@@ -255,171 +242,165 @@ Thus, the magnetic current sheet generates an electric field that "jumps" from $
 
 </details>
 
+## 1.5 Derivation of the Wave Equation
 
-
-## 1.5 Explicit vs Implicit Sources
-
-Sources in electromagnetism may be:
-
-- **explicit**, via \(\rho_e,\mathbf{J},\rho_m,\mathbf{M}\) in the PDEs,
-- **implicit**, via boundary/interface conditions.
-
-Example equivalences:
-
-- physical antenna current,
-- equivalent surface currents on a fictitious surface,
-- prescribed boundary fields.
-
-Modeling often involves choosing the most convenient representation.
-
----
-
-## 1.6 Deriving the Wave Equation
-
-In a homogeneous, source-free, lossless medium:
+Consider a source-free, homogeneous, lossless region:
+$$
+\rho_e = \rho_m = 0, \qquad \mathbf{J}=\mathbf{M}=0, \qquad \sigma=0.
+$$
+With the constitutive relations $\mathbf{D}=\epsilon\mathbf{E}$ and $\mathbf{B}=\mu\mathbf{H}$, Maxwell's curl equations become
+$$
+\nabla \times \mathbf{E} = -\mu\frac{\partial \mathbf{H}}{\partial t}
+$$
+$$
+\nabla \times \mathbf{H} = \epsilon\frac{\partial \mathbf{E}}{\partial t}
+$$
+Taking the curl of Faraday's law:
+$$
+\nabla \times (\nabla \times \mathbf{E}) = -\mu\frac{\partial}{\partial t}(\nabla \times \mathbf{H}) = -\mu\epsilon \frac{\partial^2\mathbf{E}}{\partial t^2}.
+$$
+Using the vector identity $\nabla \times(\nabla\times \mathbf{E})=\nabla(\nabla\cdot\mathbf{E})-\nabla^2\mathbf{E}$ and the fact that in a homogeneous, source-free region $\nabla\cdot\mathbf{E}=0$, the electric field satisfies the **vector wave equation**:
 
 $$
-\rho_e = \rho_m = 0,\quad \mathbf{J}=\mathbf{M}=0,\quad \sigma=0.
+\nabla^2 \mathbf{E} = \mu\epsilon \frac{\partial^2 \mathbf{E}}{\partial t^2}.
 $$
 
-Using \(\mathbf{D}=\epsilon\mathbf{E}\), \(\mathbf{B}=\mu\mathbf{H}\):
+A similar equation holds for $\mathbf{H}$.
 
+In reality, an environment is often heterogeneous (composed of various materials) and contains sources. We cover this simple case first because it exposes the essential structure of electromagnetic propagation without the bookkeeping overhead of dispersion, loss, or inhomogeneity. Once the basic machinery is understood in a homogeneous medium, more realistic environments can be treated as perturbations or layered compositions using this same underlying framework.
+
+## 1.6 General Solution of the Wave Equation
+
+The vector wave equations derived above represent three coupled scalar partial differential equations. In Cartesian coordinates:
 $$
-\nabla \times \mathbf{E} = -\mu\,\partial_t \mathbf{H},\qquad
-\nabla \times \mathbf{H} = \epsilon\,\partial_t \mathbf{E}.
+\nabla^2 \mathbf{E} = \hat{\mathbf{x}}\nabla^2 E_x + \hat{\mathbf{y}}\nabla^2 E_y + \hat{\mathbf{z}}\nabla^2 E_z
 $$
+Thus, the general electromagnetic field may consist of arbitrary superpositions of solutions in the $x$, $y$, and $z$ directions. The polarization and relative amplitudes are determined by the excitation and boundary conditions.
 
-Taking curl of Faraday:
-
+In many geometries of interest, symmetry allows us to reduce the problem. For example, in a one-dimensional case where the fields depend only on $z$ and $t$ and are polarized along a fixed direction, we may write:
 $$
-\nabla \times (\nabla \times \mathbf{E}) = -\mu\epsilon \frac{\partial^2\mathbf{E}}{\partial t^2}.
+\mathbf{E}(z,t) = \hat{\mathbf{x}}\,E_x(z,t), \qquad \mathbf{H}(z,t) = \hat{\mathbf{y}}\,H_y(z,t)
 $$
-
-Using the identity:
-
+This reduces the vector wave equation to the scalar form:
 $$
-\nabla\times\nabla\times\mathbf{E} = \nabla(\nabla\cdot\mathbf{E}) - \nabla^2\mathbf{E},
+\frac{\partial^2 E_x}{\partial z^2} = \frac{1}{v_p^2}\frac{\partial^2 E_x}{\partial t^2}, \qquad v_p = \frac{1}{\sqrt{\mu\epsilon}}
 $$
-
-and noting \(\nabla\cdot\mathbf{E}=0\),
-
+The general solution of this one-dimensional wave equation (d'Alembert's solution) is:
 $$
-\nabla^2 \mathbf{E} = \mu\epsilon\,\partial_t^2 \mathbf{E}.
+E_x(z,t) = K_1 f\!\left(t-\frac{z}{v_p}\right) + K_2 g\!\left(t+\frac{z}{v_p}\right)
 $$
+where $f$ and $g$ are arbitrary functions describing waves traveling in the $+z$ and $-z$ directions, respectively.
 
-A similar expression holds for \(\mathbf{H}\).
+### Wave Parameters and Fundamental Relationships
+To solve for a specific wave, we must relate the space-time properties of the wave to the material properties of the medium.
 
----
-
-## 1.7 General Solution of the Wave Equation
-
-In 1D for fields depending on \(z,t\),
-
+The speed of propagation is determined strictly by the medium:
 $$
-\mathbf{E}(z,t)=\hat{\mathbf{x}}E_x(z,t),\quad
-\mathbf{H}(z,t)=\hat{\mathbf{y}}H_y(z,t),
+v_p = \frac{1}{\sqrt{\mu\epsilon}} = \frac{1}{\sqrt{\mu_0\epsilon_0 \mu_r \epsilon_r}} = \frac{c}{\sqrt{\mu_r \epsilon_r}} = \frac{c}{n}
 $$
+where $c \approx 3 \times 10^8$ m/s is the speed of light in vacuum and $n$ is the refractive index.
 
-yielding the scalar PDE
+For a time-harmonic wave (oscillating at a single frequency $f$), we define:
+* **Angular Frequency:** $\omega = 2\pi f$ (rad/s)
+* **Wavenumber:** $k = \frac{\omega}{v_p} = \omega\sqrt{\mu\epsilon}$ (rad/m)
+* **Wavelength:** $\lambda = \frac{2\pi}{k} = \frac{v_p}{f}$ (m)
 
+These quantities are linked by the dispersion relation:
 $$
-\partial_z^2 E_x = \frac{1}{v_p^2}\partial_t^2 E_x,\qquad v_p = \frac{1}{\sqrt{\mu\epsilon}}.
+v_p = \frac{\omega}{k} = f\lambda
 $$
-
-The general solution is
-
-$$
-E_x(z,t) = K_1 f\!\left(t - \frac{z}{v_p}\right) + K_2 g\!\left(t + \frac{z}{v_p}\right),
-$$
-
-representing waves traveling in \(\pm z\).
-
----
-
-## 1.8 Special Choices of \(f\) and \(g\)
-
-Maxwell’s solutions form a linear vector space. In 1D, right/left traveling waves form a useful basis. In 3D, the Helmholtz eigenbasis arises:
-
-$$
-\nabla^2 \tilde{E} + k^2 \tilde{E} = 0 \quad\Rightarrow\quad
-\tilde{E}(\mathbf{r}) = E_0 e^{-j\mathbf{k}\cdot\mathbf{r}},
-$$
-
-and arbitrary fields can be expressed as
-
-$$
-\tilde{E}(\mathbf{r}) = \int \tilde{E}(\mathbf{k})\,e^{-j\mathbf{k}\cdot\mathbf{r}}\,d^3\mathbf{k}.
-$$
-
----
-
-###  Example: Canonical Mode Families (Interactive)
 
 <details>
-<summary><b>Click to reveal modes</b></summary>
+<summary><b>Example: Solving for Wave Parameters</b></summary>
 
-#### Sinusoidal Plane Waves
+Consider a 2.4 GHz WiFi signal propagating through a non-magnetic wall made of dry concrete ($\epsilon_r \approx 4.5, \mu_r = 1$).
 
-Choosing
+**1. Frequency Parameters**
 $$
-f(t-z/v_p)=\cos(\omega t - \beta z),\quad \beta=\omega/v_p
+f = 2.4 \times 10^9 \, \text{Hz}
 $$
-
-yields a monochromatic plane wave.
-
-#### Spherical Modes
-
 $$
-\tilde{E}(r)=\frac{A}{r}e^{-jkr}
+\omega = 2\pi f \approx 1.51 \times 10^{10} \, \text{rad/s}
 $$
 
-#### Cylindrical Modes
+**2. Phase Velocity**
+The wave slows down inside the dielectric:
+$$
+v_p = \frac{c}{\sqrt{\epsilon_r}} = \frac{3\times 10^8}{\sqrt{4.5}} \approx \frac{3\times 10^8}{2.12} \approx 1.41 \times 10^8 \, \text{m/s}
+$$
 
+**3. Wavenumber and Wavelength**
 $$
-\tilde{E}(\rho,\phi,z)=J_m(k_\rho\rho)e^{jm\phi}e^{-j\beta z}.
+k = \frac{\omega}{v_p} = \frac{1.51 \times 10^{10}}{1.41 \times 10^8} \approx 107 \, \text{rad/m}
 $$
+Alternatively, the wavelength in the material is compressed relative to free space:
+$$
+\lambda = \frac{v_p}{f} \approx 0.059 \, \text{m} \, (5.9 \text{ cm})
+$$
+*(Note: In free space, $\lambda_0 \approx 12.5$ cm. The high $\epsilon_r$ shrinks the wavelength.)*
 
 </details>
 
----
+## 1.7 Special Choices of $f$ and $g$
 
-## 1.9 Non-Monochromatic Fields
+The general solution $f(t - z/v_p)$ allows for *any* waveform shape. However, certain choices are physically and analytically privileged. Studying these canonical solutions is sufficient because, by linearity, any **more complicated waveform can be constructed as a superposition of simpler elementary waves**.
 
-Through Fourier synthesis:
+Because Maxwell’s equations in homogeneous, source-free media are linear, the set of solutions forms a linear vector space. In three dimensions, the scalar Helmholtz equation
+$$
+\nabla^2 \tilde{E} + k^2 \tilde{E} = 0
+$$
+admits sinusoidal plane waves as eigenmodes:
+$$
+\tilde{E}(\mathbf{r}) = E_0 e^{-j\mathbf{k}\cdot\mathbf{r}}
+$$
+By completeness of the Fourier basis, arbitrary fields may be represented as continuous superpositions (integrals) of these modes.
+
+### 1.7.1 Sinusoidal Plane Waves
+Choosing the function $f$ to be a cosine yields a monochromatic wave:
+$$
+f\!\left(t-\frac{z}{v_p}\right) = \cos(\omega t - \beta z), \qquad \beta=\frac{\omega}{v_p}
+$$
+Here, $\beta$ is often used interchangeably with $k$ to denote the propagation constant. Because the temporal and spatial dependencies are harmonic, these solutions are often called **time- and space-harmonic waves**. In homogeneous media, these are the **eigenfunctions of the wave operator**.
+
+### 1.7.2  Spherical and Cylindrical Modes
+While plane waves are the eigenmodes of Cartesian space, other geometries have their own natural basis functions:
+
+* **Spherical Modes:** For a localized source radiating outward, the wave amplitude decays with distance to conserve energy.
+    $$
+    \tilde{E}(r) = \frac{A}{r}\,e^{-jkr}
+    $$
+* **Cylindrical Modes:** In waveguides or optical fibers, the Laplacian separates in cylindrical coordinates, leading to solutions involving Bessel functions:
+    $$
+    \tilde{E}(\rho,\phi,z) = J_m(k_\rho \rho)\,e^{jm\phi}\,e^{-j\beta z}
+    $$
+
+**Any coordinate system in which the Laplacian separates** yields canonical modal solutions. Solving an electromagnetic problem often implies expanding the fields in whichever modal basis matches the symmetry of the structure.
+
+### 1.7.3  Non-monochromatic Fields (Wavepackets)
+The choices above assume a single frequency $\omega$. General signals (pulses, data streams) are constructed via Fourier synthesis:
+$$
+E(z,t) = \int_{-\infty}^{\infty} \tilde{E}(\omega)\,e^{j(\omega t - \beta(\omega) z)}\,d\omega
+$$
+These **wavepackets** may distort as they travel if the medium is dispersive (i.e., if $v_p$ depends on $\omega$), causing different frequency components to travel at different speeds.
+
+## 1.7.4  Phasor Representation
+
+A sinusoidal plane wave may be written as:
+$$
+E(z,t) = A\cos(\omega t - \beta z + \phi) = \Re\!\left\{A e^{j(\omega t - \beta z + \phi)}\right\}
+$$
+Suppressing the explicit time factor $e^{j\omega t}$ yields the **phasor**:
+$$
+\tilde{E}(z) = A e^{-j\beta z} e^{j\phi}
+$$
+Phasors convert Maxwell’s equations from time-dependent differential equations into frequency-domain algebraic equations. In a homogeneous, source-free medium, this reduces to the **Vector Helmholtz Equation**:
 
 $$
-E(z,t)=\int \tilde{E}(\omega)e^{j(\omega t - \beta(\omega)z)}\,d\omega.
+\nabla \times \nabla \times \tilde{\mathbf{E}} = k^2 \tilde{\mathbf{E}}, \qquad k=\omega\sqrt{\mu\epsilon}
 $$
 
-Dispersion induces waveform distortion.
-
----
-
-## 1.10 Phasor Representation
-
-A real sinusoidal field:
-
+This is explicitly an **eigenvalue problem** of the form:
 $$
-E(z,t)=A\cos(\omega t - \beta z + \phi)
-= \Re\!\{ A e^{j(\omega t - \beta z + \phi)}\}.
+\mathcal{L}[\tilde{\mathbf{E}}] = \lambda \tilde{\mathbf{E}}
 $$
-
-Suppressing \(e^{j\omega t}\) yields the **phasor**
-
-$$
-\tilde{E}(z)=A e^{-j\beta z}e^{j\phi}.
-$$
-
-In a homogeneous medium, frequency-domain Maxwell reduces to an eigenproblem:
-
-$$
-\nabla\times\nabla\times\tilde{\mathbf{E}} = k^2 \tilde{\mathbf{E}},\qquad k=\omega\sqrt{\mu\epsilon}.
-$$
-
-Because free space is translationally invariant, plane waves
-
-$$
-\tilde{\mathbf{E}}(\mathbf{r}) = \mathbf{E}_0 e^{-j\mathbf{k}\cdot\mathbf{r}}
-$$
-
-form a complete basis.
+where $\mathcal{L} = \nabla \times \nabla \times$ is the linear operator and $\lambda = k^2$ is the eigenvalue. A field is called a **mode** if acting on it with the operator results only in a scalar multiplication—the field profile does not change shape, only its complex amplitude.

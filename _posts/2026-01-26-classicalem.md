@@ -1,6 +1,6 @@
 ---
 title: "Classical EM: Sources"
-date: 2025-04-29
+date: 2026-01-26
 permalink: /posts/optics/classicalem_sources/
 tags:
   - electromagnetism

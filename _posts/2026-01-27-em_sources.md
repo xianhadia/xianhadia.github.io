@@ -271,3 +271,76 @@ $$
 $$
 
 These fictitious currents, radiating in free space, produce the exact same fields outside $V$ as the original complex sources.
+
+## 1.6 Image Theory
+
+The Equivalence Principle allows us to replace a volume with surface currents, but **Image Theory** allows us to replace a conductive boundary with virtual sources. This is particularly useful when solving for radiation near ground planes or simplifying the equivalent currents derived in the previous section.
+
+
+To apply image theory, we idealize materials into two theoretical limits where fields cannot exist.
+
+* **Perfect Electric Conductor (PEC):**
+    A material with infinite conductivity ($\sigma \to \infty$).
+    * Inside the PEC, charges redistribute instantly to cancel any applied electric field, so $\mathbf{E}_{int} = 0$ and $\mathbf{H}_{int} = 0$.
+    * **Boundary Condition:** The tangential electric field must vanish at the surface to maintain continuity with the zero field inside.
+        $$\hat{\mathbf{n}} \times \mathbf{E} = 0$$
+
+* **Perfect Magnetic Conductor (PMC):**
+    A theoretical "dual" to the PEC (does not exist in nature but is useful for symmetry and modeling high-impedance surfaces).
+    * Inside the PMC, $\mathbf{E}_{int} = 0$ and $\mathbf{H}_{int} = 0$.
+    * **Boundary Condition:** The tangential magnetic field must vanish at the surface.
+        $$\hat{\mathbf{n}} \times \mathbf{H} = 0$$
+
+When a source is placed near a PEC or PMC, the boundary conditions can be satisfied by removing the conductor and placing an "image source" in the region previously occupied by the conductor.
+
+The orientation of the image source depends on whether the source vector is **parallel** (tangential) or **perpendicular** (normal) to the boundary.
+
+**Case A: Electric Source ($\mathbf{J}$) over PEC**
+* **Vertical Current ($\mathbf{J}_{\perp}$):** To support a non-zero normal field ($\mathbf{D}_n$) while keeping tangential fields zero, the image current must flow in the **same** direction. The fields add up.
+* **Horizontal Current ($\mathbf{J}_{\parallel}$):** To force the tangential electric field to zero at the boundary, the image current must flow in the **opposite** direction. The fields cancel out.
+
+**Case B: Magnetic Source ($\mathbf{M}$) over PEC**
+Because magnetic currents are the mathematical dual of electric currents, the rules are reversed.
+* **Vertical Magnetic Current ($\mathbf{M}_{\perp}$):** Image opposes source.
+* **Horizontal Magnetic Current ($\mathbf{M}_{\parallel}$):** Image is in the **same** direction.
+
+
+
+| Source Type | Orientation | PEC Image | PMC Image |
+| :--- | :--- | :--- | :--- |
+| **Electric ($\mathbf{J}$)** | Vertical ($\perp$) | Same Direction ($+$) | Opposite ($-$) |
+| **Electric ($\mathbf{J}$)** | Horizontal ($\parallel$) | Opposite ($-$) | Same Direction ($+$) |
+| **Magnetic ($\mathbf{M}$)** | Vertical ($\perp$) | Opposite ($-$) | Same Direction ($+$) |
+| **Magnetic ($\mathbf{M}$)** | Horizontal ($\parallel$) | Same Direction ($+$) | Opposite ($-$) |
+
+---
+
+<details>
+<summary><b>Example: Uniting Equivalence & Image Theory (Radiation from an Aperture)</b></summary>
+
+**The Problem:**
+We have an infinite PEC wall at $z=0$ (the $xy$-plane). There is a small rectangular slot (aperture) in the wall where the electric field is known to be $\mathbf{E}_{ap}$. We want to find the radiation into the half-space $z>0$. Such a setup is the standard analytical model for describing the aperture of a horn antenna.
+
+**Step 1: Apply Surface Equivalence Principle**
+We place a surface $S$ along the wall ($z=0$). We replace the region $z<0$ with zero field. To support the discontinuity, we introduce surface currents on $S$:
+* **Electric Current:** $\mathbf{J}_s = \hat{\mathbf{n}} \times \mathbf{H}_{ap}$
+* **Magnetic Current:** $\mathbf{M}_s = -\hat{\mathbf{n}} \times \mathbf{E}_{ap} = \mathbf{E}_{ap} \times \hat{\mathbf{z}}$
+
+We now have these currents radiating in free space, but they are technically sitting on top of the original PEC plane geometry.
+
+**Step 2: Apply Image Theory**
+We can remove the PEC plane entirely if we replace it with the images of the currents sitting on it.
+* **Consider $\mathbf{J}_s$:** This current lies *flat* on the PEC surface (tangential). According to image theory, a horizontal electric current creates a negative image that cancels it out exactly.
+    $$\mathbf{J}_{total} = \mathbf{J}_s + \mathbf{J}_{image} = \mathbf{J}_s - \mathbf{J}_s = 0$$
+    *Physical interpretation: The electric current is "shorted out" by the conductor.*
+
+* **Consider $\mathbf{M}_s$:** This current also lies flat on the PEC surface. According to image theory, a horizontal magnetic current creates a positive image that reinforces it.
+    $$\mathbf{M}_{total} = \mathbf{M}_s + \mathbf{M}_{image} = \mathbf{M}_s + \mathbf{M}_s = 2\mathbf{M}_s$$
+
+**Step 3: Final Equivalent Model**
+The complex problem of a slot in a conductive wall has been reduced to a single equivalent magnetic current radiating in free space:
+$$
+\mathbf{M}_{eq} = 2 (\mathbf{E}_{ap} \times \hat{\mathbf{z}})
+$$
+We can now calculate the far-field radiation simply by integrating this isolated source.
+</details>

@@ -1,7 +1,7 @@
 ---
 title: "Electromagnetcs: Sources"
-date: 2026-01-26
-permalink: /posts/optics/em_sources/
+date: 2026-01-27
+permalink: /posts/optics/em_01/
 tags:
   - electromagnetism
   - physics

@@ -245,6 +245,7 @@ Solving for the field amplitude:
 $$
 E_0 = -\frac{M_0}{2}
 $$
+</details>
 
 ## 1.5 Surface Equivalence Principle
 

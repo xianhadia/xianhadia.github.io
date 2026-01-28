@@ -1,5 +1,5 @@
 ---
-title: "Electromagnetcs: Sources"
+title: "Electromagnetics: Sources"
 date: 2026-01-27
 permalink: /posts/optics/em_01/
 tags:
@@ -51,9 +51,84 @@ $$
 
 where $V$ is the volume enclosed by $S$. The magnetic charge densities and currents introduced above are not known to exist physically but including them now allows for symmetry within Maxwell's equations and enables later use of duality transformations.
 
+## 1.2 Duality Transformations
+
+Maxwell’s equations in linear, isotropic media exhibit a striking symmetry. If we exchange electrical quantities with magnetic quantities (and vice versa), the form of the equations remains invariant. This allows us to solve a problem for an electric source ($\mathbf{J}$) and immediately know the solution for the corresponding magnetic source ($\mathbf{M}$) without resolving the differential equations.
+
+The general duality transformation is a rotation in electromagnetic space. However, two specific variations are most common: **Mathematical Duality** (unit-agnostic) and **Scaled Duality** (unit-preserving).
+
+**1. Mathematical Duality**
+This simple substitution swaps vectors directly. It is useful for verifying symmetries but ignores units (e.g., swapping Volts/m for Amps/m).
+
+$$
+\mathbf{E} \to \mathbf{H}, \quad \mathbf{H} \to -\mathbf{E}, \quad \mathbf{J} \to \mathbf{M}, \quad \mathbf{M} \to -\mathbf{J}, \quad \epsilon \leftrightarrow \mu
+$$
+
+**2. Scaled Duality (Engineering Duality)**
+To preserve physical units (so that Volts map to Volts) and maintain power relations, we introduce the intrinsic impedance of the medium, $\eta = \sqrt{\mu/\epsilon}$. This scaling is critical when converting known antenna solutions (e.g., electric dipoles) to their dual counterparts (e.g., magnetic loops).
+
+The transformation from an Electric System ($e$) to a Magnetic System ($m$) is:
+
+$$
+\mathbf{E}_m = -\eta \mathbf{H}_e \qquad \mathbf{H}_m = \frac{1}{\eta} \mathbf{E}_e
+$$
+
+$$
+\mathbf{M}_m = \eta \mathbf{J}_e \qquad \rho_{mm} = \eta \rho_{ee}
+$$
+
+<details>
+<summary><b>Example: From Hertzian Dipole to Small Loop</b></summary>
+
+A **Hertzian Dipole** is a short filament of electric current $I$ of length $l$ (moment $Il$) oriented along the $z$-axis. Its known far-field radiation is:
+
+$$
+\mathbf{E}_e = j\eta k I l \frac{e^{-jkr}}{4\pi r} \sin\theta \, \hat{\boldsymbol{\theta}}
+$$
+$$
+\mathbf{H}_e = j k I l \frac{e^{-jkr}}{4\pi r} \sin\theta \, \hat{\boldsymbol{\phi}}
+$$
+
+We wish to find the fields of a **Small Loop Antenna** (a magnetic dipole). A small loop of area $S$ carrying current $I_{loop}$ is equivalent to a magnetic current element $K l_{eq} = j\omega\mu I_{loop} S$.
+
+Instead of solving Maxwell's equations from scratch, we use **Scaled Duality**.
+
+**1. Identify the Source Transformation**
+The electric source magnitude is $J_e \propto Il$. The dual magnetic source is $M_m$. According to scaled duality:
+$$
+M_m = \eta (Il)
+$$
+
+**2. Transform the Fields**
+To find the electric field of the magnetic loop ($\mathbf{E}_{loop}$), we apply the scaled transformation to the dipole's magnetic field ($\mathbf{H}_e$):
+
+$$
+\mathbf{E}_{loop} = -\eta \mathbf{H}_e
+$$
+
+Substituting the known expression for $\mathbf{H}_e$:
+
+$$
+\mathbf{E}_{loop} = -\eta \left( j k (Il) \frac{e^{-jkr}}{4\pi r} \sin\theta \, \hat{\boldsymbol{\phi}} \right)
+$$
+
+**3. Substitute the Dual Source**
+We must replace the old source magnitude $(Il)$ with the new source magnitude using $Il = M_m / \eta$:
+
+$$
+\mathbf{E}_{loop} = -\eta \left( j k \frac{M_m}{\eta} \frac{e^{-jkr}}{4\pi r} \sin\theta \, \hat{\boldsymbol{\phi}} \right)
+$$
+
+$$
+\mathbf{E}_{loop} = -j k M_m \frac{e^{-jkr}}{4\pi r} \sin\theta \, \hat{\boldsymbol{\phi}}
+$$
+
+This result perfectly matches the derivation for a magnetic dipole obtained via vector potentials, achieved purely through algebraic substitution.
+
+</details>
 
 
-## 1.2 Constitutive Relations
+## 1.3 Constitutive Relations
 
 Maxwell’s equations couple to matter through material laws
 
@@ -134,7 +209,7 @@ This simple example highlights two complementary routes for solving Maxwell's eq
 form and solving the resulting partial differential equations (here, Poisson's equation for $\phi$).
 
 
-## 1.3 Continuity and Charge Conservation
+## 1.4 Continuity and Charge Conservation
 
 Charge conservation imposes a local constraint on admissible electromagnetic fields. In differential form, the conservation of electric (and magnetic) charge is expressed through the continuity equations
 
@@ -168,7 +243,7 @@ If \(I\) changes suddenly, transient charge buildup temporarily violates $\nabla
 
 </details>
 
-## 1.4 Boundary Conditions
+## 1.5 Boundary Conditions
 
 Maxwell’s equations in differential form assume the field vectors are differentiable. However, at the interface between two different media, the material parameters ($\epsilon, \mu, \sigma$) often change abruptly. To handle this (alongside the mathematical necessity of coupled PDEs requiriing certain conditions for a unique solution), we introduce boundary conditions
 
@@ -247,7 +322,7 @@ E_0 = -\frac{M_0}{2}
 $$
 </details>
 
-## 1.5 Surface Equivalence Principle
+## 1.6 Surface Equivalence Principle
 
 Sources enter Maxwell's theory in two distinct ways: **explicitly** as volumetric densities ($\rho, \mathbf{J}$) driving the differential equations, or **implicitly** as surface singularities ($\rho_s, \mathbf{J}_s$) enforcing discontinuities at boundaries.
 
@@ -261,7 +336,7 @@ According to the Uniqueness Theorem, the field solution in the outside region is
 2.  **Equivalent Problem:** We conceptually remove the "junk" inside $V$ and replace it with a region of zero field ($\mathbf{E}=0, \mathbf{H}=0$).
 3.  **The Fix:** To support the discontinuity between the zero field inside and the actual field outside, we must introduce **equivalent surface currents** on $S$.
 
-Using the boundary conditions derived in Section 1.4 (where $\hat{\mathbf{n}}$ points outward from the zero-field region into the solution region), these currents are:
+Using the boundary conditions derived in Section 1.5 (where $\hat{\mathbf{n}}$ points outward from the zero-field region into the solution region), these currents are:
 
 $$
 \mathbf{J}_s = \hat{\mathbf{n}} \times (\mathbf{H} - 0) = \hat{\mathbf{n}} \times \mathbf{H}
@@ -273,7 +348,7 @@ $$
 
 These fictitious currents, radiating in free space, produce the exact same fields outside $V$ as the original complex sources.
 
-## 1.6 Image Theory
+## 1.7 Image Theory
 
 The Equivalence Principle allows us to replace a volume with surface currents, but **Image Theory** allows us to replace a conductive boundary with virtual sources. This is particularly useful when solving for radiation near ground planes or simplifying the equivalent currents derived in the previous section.
 

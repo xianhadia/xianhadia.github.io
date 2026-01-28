@@ -80,7 +80,7 @@ $$
 <details>
 <summary><b>Example: From Hertzian Dipole to Small Loop</b></summary>
 
-A **Hertzian Dipole** is a short filament of electric current $I$ of length $l$ (moment $Il$) oriented along the $z$-axis. Its known far-field radiation is:
+A **Hertzian Dipole** is a wire of length $l$ (moment $Il$) oriented along the $z$-axis with an electric current $I$ . Its known far-field radiation is:
 
 $$
 \mathbf{E}_e = j\eta k I l \frac{e^{-jkr}}{4\pi r} \sin\theta \, \hat{\boldsymbol{\theta}}
@@ -333,7 +333,7 @@ Consider a bounded volume $V$ containing "electromagnetic junk" -- complex sourc
 According to the Uniqueness Theorem, the field solution in the outside region is uniquely determined if we know the tangential fields on the boundary $S$. Therefore, we can perform this:
 
 1.  **Original Problem:** We have complex sources inside $V$ producing fields $\mathbf{E}, \mathbf{H}$ outside.
-2.  **Equivalent Problem:** We conceptually remove the "junk" inside $V$ and replace it with a region of zero field ($\mathbf{E}=0, \mathbf{H}=0$).
+2.  **Equivalent Problem:** We conceptually remove the "junk" inside $V$ and replace it with a region of zero field ($\mathbf{E}=0, \mathbf{H}=0$) fully enclosed by a surface  $S$.
 3.  **The Fix:** To support the discontinuity between the zero field inside and the actual field outside, we must introduce **equivalent surface currents** on $S$.
 
 Using the boundary conditions derived in Section 1.5 (where $\hat{\mathbf{n}}$ points outward from the zero-field region into the solution region), these currents are:
@@ -392,7 +392,7 @@ Because magnetic currents are the mathematical dual of electric currents, the ru
 ---
 
 <details>
-<summary><b>Example: Uniting Equivalence & Image Theory (Radiation from an Aperture)</b></summary>
+<summary><b>Example: Radiation from an Aperture / Horn Antenna </b></summary>
 
 **The Problem:**
 We have an infinite PEC wall at $z=0$ (the $xy$-plane). There is a small rectangular slot (aperture) in the wall where the electric field is known to be $\mathbf{E}_{ap}$. We want to find the radiation into the half-space $z>0$. Such a setup is the standard analytical model for describing the aperture of a horn antenna.

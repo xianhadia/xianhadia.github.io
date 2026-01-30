@@ -161,7 +161,7 @@ $$
 To account for both phase shift and attenuation (absorption), we use the **complex refractive index** $\tilde{n}$:
 
 $$
-\tilde{n} = n + i\kappa
+\tilde{n} = n + j\kappa
 $$
 
 * **$n$ (Real part):** Related to the phase velocity, $v = c/n$.

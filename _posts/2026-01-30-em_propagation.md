@@ -9,7 +9,7 @@ tags:
   - waves
 ---
 
-Having established in Chapter 1 that sources ($\rho, \mathbf{J}$) give rise to electromagnetic fields, we now turn to the second link in the causal chain: **Propagation**. Once a field is generated, it takes on a life of its own, traveling through space governed by the properties of the medium rather than the source that created it.
+Having established in Chapter 1 that sources ($\rho, \mathbf{J}$) give rise to electromagnetic fields, we now turn to the second link in the causal chain: **Propagation**.
 
 This chapter explores how electromagnetic fields behave in source-free regions, moving from the general wave equation to specific solutions like plane waves, and finally to the behavior of waves at interfaces.
 

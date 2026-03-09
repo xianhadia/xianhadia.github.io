@@ -8,7 +8,7 @@ tags:
   - academic
 ---
 
-The causal chain source $\longrightarrow$ field  $\longrightarrow$ observable reflects the factorization of physics into three components: excitations (sources), propagation through a medium (determined by materials and boundary conditions), and measuring quantities (observations). The notes within my classical electromagnetism section will follow this structure with the first section modeling sources.
+The causal chain of source $\longrightarrow$ field  $\longrightarrow$ observable reflects the factorization of physics into three components: excitations (sources), propagation through a medium (determined by materials and boundary conditions), and measuring quantities (observations). The notes within my classical electromagnetism section will follow this structure with the first section modeling sources.
 
 ## 1.1 Maxwell’s Equations
 
@@ -53,7 +53,7 @@ where $V$ is the volume enclosed by $S$. The magnetic charge densities and curre
 
 ## 1.2 Duality Transformations
 
-Maxwell’s equations in linear, isotropic media exhibit a striking symmetry. If we exchange electrical quantities with magnetic quantities (and vice versa), the form of the equations remains invariant. This allows us to solve a problem for an electric source ($\mathbf{J}$) and immediately know the solution for the corresponding magnetic source ($\mathbf{M}$) without resolving the differential equations.
+Maxwell’s equations in linear, isotropic media exhibit a striking symmetry. If we exchange electrical quantities with magnetic quantities (and vice versa), the form of the equations remains invariant. This allows us to solve a problem for an electric source ($\mathbf{J}$) and immediately know the solution for the corresponding magnetic source ($\mathbf{M}$) without have to solve for a completely new set of equations.
 
 The general duality transformation is a rotation in electromagnetic space. However, two specific variations are most common: **Mathematical Duality** (unit-agnostic) and **Scaled Duality** (unit-preserving).
 
@@ -64,7 +64,7 @@ $$
 \mathbf{E} \to \mathbf{H}, \quad \mathbf{H} \to -\mathbf{E}, \quad \mathbf{J} \to \mathbf{M}, \quad \mathbf{M} \to -\mathbf{J}, \quad \epsilon \leftrightarrow \mu
 $$
 
-**2. Scaled Duality (Engineering Duality)**
+**2. Scaled Duality**
 To preserve physical units (so that Volts map to Volts) and maintain power relations, we introduce the intrinsic impedance of the medium, $\eta = \sqrt{\mu/\epsilon}$. This scaling is critical when converting known antenna solutions (e.g., electric dipoles) to their dual counterparts (e.g., magnetic loops).
 
 The transformation from an Electric System ($e$) to a Magnetic System ($m$) is:
@@ -228,7 +228,7 @@ Thus the charge in a region can only change via current crossing its boundary.
 
 Charge conservation is **not independent** of Maxwell’s equations. Taking $\nabla\cdot$ of Ampère–Maxwell and using $\nabla\cdot\nabla\times\!\bullet=0$ plus Gauss’s law recovers the continuity equation.
 
-At a more abstract level, conservation laws arise from symmetries. In electromagnetism, global gauge invariance implies conservation of electric charge (Noether's theorem), whose local expression is precisely the continuity equation. The continuity equation in turn constrains the permissible electromagnetic fields and sources.
+At a more abstract level, conservation laws arise from symmetries. In electromagnetism, global gauge invariance implies conservation of electric charge, whose local expression is precisely the continuity equation. The continuity equation in turn constrains the permissible electromagnetic fields and sources.
 
 <details>
 <summary><b>Example: Steady Current in a Wire</b></summary>
@@ -328,7 +328,7 @@ Sources enter Maxwell's theory in two distinct ways: **explicitly** as volumetri
 
 In many practical electromagnetic problems, explicit volumetric sources are absent from the region of interest. Instead, the physics is driven by equivalent surface charges or currents defined at interfaces. A key skill in modeling is recognizing that these descriptions are often physically equivalent, differing only in mathematical convenience.
 
-Consider a bounded volume $V$ containing "electromagnetic junk" -- complex sources, nonlinear media, or intricate geometrie. Let us introduce a fictitious surface enclosing the "junk" called $S$. To examine the fields ($\mathbf{E}, \mathbf{H}$) outside the volume, we can use the Equivalence Principle.
+Consider a bounded volume $V$ containing "electromagnetic junk" -- complex sources, nonlinear media, or intricate geometries. Let us introduce a fictitious surface enclosing the "junk" called $S$. To examine the fields ($\mathbf{E}, \mathbf{H}$) outside the volume, we can use the Equivalence Principle.
 
 According to the Uniqueness Theorem, the field solution in the outside region is uniquely determined if we know the tangential fields on the boundary $S$. Therefore, we can perform this:
 

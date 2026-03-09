@@ -42,8 +42,8 @@ $$
 
 A strictly analogous equation holds for the magnetic field $\mathbf{H}$.
 
-### 2.1.1 The Scalar Approximation
-The vector wave equation represents three coupled scalar PDEs (one for each Cartesian component). In many cases, we can simplify the problem by assuming the field is linearly polarized (e.g., $\mathbf{E}$ points only in the $x$-direction) and depends only on the longitudinal coordinate $z$ and time $t$. This reduces the vector equation to the scalar form:
+### 2.1.1 Scalar Version of Equation
+The vector wave equation represents three coupled scalar PDEs (one for each Cartesian component). Let us simplify the problem by assuming the field is linearly polarized (e.g., $\mathbf{E}$ points only in the $x$-direction) and depends only on the longitudinal coordinate $z$ and time $t$. This reduces the vector equation to the scalar form:
 
 $$
 \frac{\partial^2 E_x}{\partial z^2} - \frac{1}{v^2}\frac{\partial^2 E_x}{\partial t^2} = 0
@@ -54,8 +54,8 @@ $$
 v = \frac{1}{\sqrt{\mu\epsilon}} = \frac{c}{n}
 $$
 
-## 2.2 General Solutions (d'Alembert)
-The general solution to the 1D scalar wave equation, known as **d'Alembert’s solution**, is a superposition of two traveling waves:
+## 2.2 General Solutions 
+The general solution to the 1D scalar wave equation is a superposition of two traveling waves:
 
 $$
 E_x(z,t) = f\left(t - \frac{z}{v}\right) + g\left(t + \frac{z}{v}\right)
@@ -108,7 +108,7 @@ $$
 $$
 where the operator $\hat{L} = -\nabla^2$ and the eigenvalue is $\lambda = k^2$. This perspective is crucial in computational electromagnetics, where we often solve for the "modes" (eigenvectors) of a structure.
 
-## 2.4 Uniform Plane Waves (UPW)
+## 2.4 Uniform Plane Waves
 The simplest solution to the Helmholtz equation in Cartesian coordinates is the Uniform Plane Wave.
 $$
 \tilde{\mathbf{E}}(z) = \mathbf{E}_0 e^{-jkz}

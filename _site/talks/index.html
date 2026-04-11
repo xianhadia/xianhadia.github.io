@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talks - Xian Hadia</title>
+  <meta name="description" content="Academic webpage of Xian Hadia">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Talks">
+  <meta property="og:description" content="Academic webpage of Xian Hadia">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:4000/talks/">
+  <meta property="og:image" content="http://localhost:4000/images/headshot.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Talks">
+  <meta name="twitter:description" content="Academic webpage of Xian Hadia">
+  <meta name="twitter:image" content="http://localhost:4000/images/headshot.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;0,8..60,800;1,8..60,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/talks/">
+  <link rel="icon" href="http://localhost:4000/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="http://localhost:4000/favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="Xian Hadia" href="http://localhost:4000/feed.xml">
+
+  <!-- Accent color from config -->
+  
+  <style>
+    :root { --accent: #1a7a6d; --accent-hover: #1a7a6d; }
+  </style>
+  
+
+  <!-- Dark mode: apply saved theme before paint to prevent flash -->
+  <script>
+    (function() {
+      var darkMode = true;
+      if (!darkMode) return;
+      var saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-bs-theme', saved);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+    })();
+  </script>
+
+  
+
+  <script>
+MathJax = {
+    tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+    tags: 'ams'  // should be 'ams', 'none', or 'all' }. This line makes the equation numbering and labeling work
+    }, 
+    svg: {
+    fontCache: 'global'
+    }
+};
+</script>
+<script
+    type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script> 
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Talks",
+    "url": "http://localhost:4000/talks/",
+    "description": "Academic webpage of Xian Hadia",
+    "author": {
+      "@type": "Person",
+      "name": "Xian Hadia",
+      "jobTitle": "PhD Stududent and Electrical Engineer",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Georgia Institute of Technology"
+      },
+      "sameAs": ["https://scholar.google.com/citations?user=faPctLoAAAAJ&hl=en", "https://github.com/xianhadia"]
+    }
+  }
+  </script>
+</head>
+
+
+  <body>
+
+    <nav class="navbar sticky-top navbar-expand-md">
+  <div class="container" style="max-width: var(--container-max);">
+    <a class="navbar-brand" href="http://localhost:4000/">
+      <img src="http://localhost:4000/favicon.svg" width="24" height="24" class="d-inline-block align-text-top" alt="" style="border-radius: 5px;">
+      Xian Hadia
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:4000/">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:4000/about">About</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:4000/publications">Publications</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:4000/research">Research</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:4000/blogs">Blogs</a>
+        </li>
+        
+      </ul>
+      <div class="d-flex align-items-center" style="gap: var(--space-2);">
+        <button class="search-toggle" id="searchToggle" aria-label="Search site">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        
+        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </button>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Search overlay -->
+<div class="search-overlay" id="searchOverlay">
+<div class="search-modal">
+<div class="search-input-wrapper">
+<i class="fa-solid fa-magnifying-glass search-input-icon"></i>
+<input type="text" class="search-input" id="searchInput" placeholder="Search pages..." autocomplete="off">
+<kbd class="search-kbd">ESC</kbd>
+</div>
+<div class="search-results" id="searchResults"></div>
+</div>
+</div>
+
+
+    <main class="site-container">
+      <div class="fade-in-section">
+  <h2 id="talks">Talks</h2>
+
+<div class="section-card" id="pubList">
+  <h3>Invited Talks</h3>
+
+  <ol class="bibliography" reversed="reversed"><li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1986challenger">Feynman, R. P. (1986). <i>Personal observations on the reliability of the Shuttle</i>. Rogers Commission, Washington, D.C.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1986challenger">Feynman, R. P. (1986). <i>Personal observations on the reliability of the Shuttle</i>. Rogers Commission, Washington, D.C.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1986challenger">
+    <pre>@incollection{feynman1986challenger,
+  author = {Feynman, R. P.},
+  title = {Personal observations on the reliability of the Shuttle},
+  note = {Rogers Commission, Washington, D.C.},
+  year = {1986},
+  keywords = {invited}
+}
+</pre>
+  </div>
+  
+
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1981computing">Feynman, R. P. (1981). <i>Simulating physics with computers</i>. MIT Conference on Physics and Computation.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1981computing">Feynman, R. P. (1981). <i>Simulating physics with computers</i>. MIT Conference on Physics and Computation.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1981computing">
+    <pre>@incollection{feynman1981computing,
+  author = {Feynman, R. P.},
+  title = {Simulating physics with computers},
+  note = {MIT Conference on Physics and Computation},
+  year = {1981},
+  keywords = {invited}
+}
+</pre>
+  </div>
+  
+
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1965nobel">Feynman, R. P. (1965). <i>The development of the space-time view of quantum electrodynamics</i>. Nobel Lecture, Stockholm.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1965nobel">Feynman, R. P. (1965). <i>The development of the space-time view of quantum electrodynamics</i>. Nobel Lecture, Stockholm.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1965nobel">
+    <pre>@incollection{feynman1965nobel,
+  author = {Feynman, R. P.},
+  title = {The development of the space-time view of quantum electrodynamics},
+  note = {Nobel Lecture, Stockholm},
+  year = {1965},
+  keywords = {invited}
+}
+</pre>
+  </div>
+  
+
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1959plenty">Feynman, R. P. (1959). <i>There’s plenty of room at the bottom</i>. Annual Meeting of the American Physical Society, Caltech.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1959plenty">Feynman, R. P. (1959). <i>There’s plenty of room at the bottom</i>. Annual Meeting of the American Physical Society, Caltech.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1959plenty">
+    <pre>@incollection{feynman1959plenty,
+  author = {Feynman, R. P.},
+  title = {There's plenty of room at the bottom},
+  note = {Annual Meeting of the American Physical Society, Caltech},
+  year = {1959},
+  keywords = {invited}
+}
+</pre>
+  </div>
+  
+
+  
+</div>
+</li></ol>
+
+  <h3>Regular Talks</h3>
+
+  <ol class="bibliography" reversed="reversed"><li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1987qcd">Feynman, R. P. (1987). <i>Difficulties in applying the variational principle to quantum field theories</i>. Workshop on Variational Calculations in Quantum Field Theory, Wangerooge.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1987qcd">Feynman, R. P. (1987). <i>Difficulties in applying the variational principle to quantum field theories</i>. Workshop on Variational Calculations in Quantum Field Theory, Wangerooge.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1987qcd">
+    <pre>@incollection{feynman1987qcd,
+  author = {Feynman, R. P.},
+  title = {Difficulties in applying the variational principle to quantum field theories},
+  note = {Workshop on Variational Calculations in Quantum Field Theory, Wangerooge},
+  year = {1987}
+}
+</pre>
+  </div>
+  
+
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1975los">Feynman, R. P. (1975). <i>Los Alamos from below</i>. APS Annual Meeting, Santa Barbara.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1975los">Feynman, R. P. (1975). <i>Los Alamos from below</i>. APS Annual Meeting, Santa Barbara.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1975los">
+    <pre>@incollection{feynman1975los,
+  author = {Feynman, R. P.},
+  title = {Los Alamos from below},
+  note = {APS Annual Meeting, Santa Barbara},
+  year = {1975}
+}
+</pre>
+  </div>
+  
+
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1970partons">Feynman, R. P. (1970). <i>The parton model</i>. Third International Conference on High Energy Collisions, Stony Brook.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1970partons">Feynman, R. P. (1970). <i>The parton model</i>. Third International Conference on High Energy Collisions, Stony Brook.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1970partons">
+    <pre>@incollection{feynman1970partons,
+  author = {Feynman, R. P.},
+  title = {The parton model},
+  note = {Third International Conference on High Energy Collisions, Stony Brook},
+  year = {1970}
+}
+</pre>
+  </div>
+  
+
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1961lectures">Feynman, R. P. (1964). <i>The relation of mathematics to physics</i>. Cornell Messenger Lectures.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1961lectures">Feynman, R. P. (1964). <i>The relation of mathematics to physics</i>. Cornell Messenger Lectures.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1961lectures">
+    <pre>@incollection{feynman1961lectures,
+  author = {Feynman, R. P.},
+  title = {The relation of mathematics to physics},
+  note = {Cornell Messenger Lectures},
+  year = {1964}
+}
+</pre>
+  </div>
+  
+
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1957weak">Feynman, R. P. (1957). <i>The universal Fermi interaction</i>. Rochester Conference on High Energy Physics.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1957weak">Feynman, R. P. (1957). <i>The universal Fermi interaction</i>. Rochester Conference on High Energy Physics.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1957weak">
+    <pre>@incollection{feynman1957weak,
+  author = {Feynman, R. P.},
+  title = {The universal Fermi interaction},
+  note = {Rochester Conference on High Energy Physics},
+  year = {1957}
+}
+</pre>
+  </div>
+  
+
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1953helium">Feynman, R. P. (1953). <i>Atomic theory of liquid helium</i>. International Conference on Theoretical Physics, Tokyo.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1953helium">Feynman, R. P. (1953). <i>Atomic theory of liquid helium</i>. International Conference on Theoretical Physics, Tokyo.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1953helium">
+    <pre>@incollection{feynman1953helium,
+  author = {Feynman, R. P.},
+  title = {Atomic theory of liquid helium},
+  note = {International Conference on Theoretical Physics, Tokyo},
+  year = {1953}
+}
+</pre>
+  </div>
+  
+
+  
+</div>
+</li></ol>
+</div>
+
+</div>
+
+    </main>
+
+    <footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h5>About</h5>
+      <p>
+        Xian Hadia<br>
+        PhD Stududent and Electrical Engineer<br>
+        Georgia Institute of Technology
+      </p>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <p>
+        <a href="mailto:xhadia3@gatech.edu"><i class="fa-solid fa-envelope"></i> xhadia3@gatech.edu</a><br>
+        <a href="https://github.com/xianhadia"><i class="fa-brands fa-github"></i> GitHub</a><br>
+      </p>
+    </div>
+    <div>
+      <h5>Links</h5>
+      <p>
+        <a href="https://scholar.google.com/citations?user=faPctLoAAAAJ&hl=en"><i class="ai ai-google-scholar"></i> Google Scholar</a><br>
+        
+        <a href="https://github.com/sbryngelson/academic-website-template"><i class="fa-brands fa-github"></i> Use this template!</a>
+      </p>
+    </div>
+  </div>
+  <div class="footer-grid">
+    <div class="footer-copyright" style="grid-column: 1 / -1;">
+      &copy; 2026 Xian Hadia
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/javascript/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/site.min.js"></script>
+
+
+  </body>
+
+</html>

@@ -1,19 +1,19 @@
 # ============================================================
 # STEP 1: Your Identity (required)
 # ============================================================
-name: "Richard Feynman"
-title: "Professor of Physics"
-institution: "California Institute of Technology"
-email: richard@university.edu
+name: "Xian Hadia"
+title: "PhD Student and Electrical Engineer"
+institution: "Georgia Institute of Technology"
+email: xhadia3@gatech.edu
 photo: headshot.jpg  # place your photo in images/
 
 # ============================================================
 # STEP 2: Your Links (optional -- delete any you don't use)
 # ============================================================
 links:
-  google_scholar: "https://scholar.google.com/citations?user=B7vSqZsAAAAJ"
-  github: "https://github.com/"
-  researchgate: "https://www.researchgate.net/"
+  google_scholar: "https://scholar.google.com/citations?user=faPctLoAAAAJ&hl=en"
+  github: "https://github.com/xianhadia"
+  # researchgate: "https://www.researchgate.net/"
   orcid: ""
   twitter: ""
   linkedin: ""
@@ -24,9 +24,9 @@ links:
 # ============================================================
 accent_color: "#1a7a6d"      # theme color for links and buttons
 dark_mode: true              # show dark mode toggle in navbar
-description: "Academic webpage of Dr. Richard Feynman"
+description: "Academic webpage of Xian Hadia"
 baseurl: ""
-url: ""
+url: "https://xianhadia.github.io"
 
 # Google Analytics — paste your GA4 measurement ID, or leave blank
 analytics:
@@ -38,11 +38,11 @@ analytics:
 nav_pages:
   - name: about
   - name: publications
-  - name: talks
+#  - name: talks
   - name: research
-  - name: software
-  - name: team
-  - name: teaching
+#   - name: software
+#   - name: team
+#   - name: teaching
   - name: blogs
 
 # ============================================================

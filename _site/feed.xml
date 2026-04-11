@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xian Hadia</title>
+    <description>Academic webpage of Xian Hadia</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Sat, 11 Apr 2026 19:12:39 -0400</lastBuildDate>
+    
+    <item>
+      <title>Great Mathematicians and Physicists</title>
+      <description>A list of 50 brilliant minds who have significantly advanced our understanding of the world and contributed to making it a better place! Name Years Country Major Contributions Pythagoras 570-495 BC Greece Best known for the Pythagorean theorem, which relates the sides of a right triangle. His contributions also extend to musical theory and philosophical concepts of numbers and their relationships. Euclid circa 300 BC Greece Often referred to as the &apos;Father of Geometry,&apos; Euclid&apos;s work &apos;Elements&apos; is one of the most influential works in the history of mathematics, laying out the foundations of plane geometry. Nicolaus Copernicus 1473-1543 Poland...</description>
+      <pubDate>Fri, 31 May 2024 00:00:00 -0400</pubDate>
+      <link>http://localhost:4000/fun/2024/05/31/great-mathematicians-and-physicists.html</link>
+      <guid isPermaLink="true">http://localhost:4000/fun/2024/05/31/great-mathematicians-and-physicists.html</guid>
+    </item>
+    
+    <item>
+      <title>Space-Time</title>
+      <description>Lorentz transformation
+
+\[\begin{equation}\label{lorentz}
+\begin{aligned}
+x&apos; &amp;amp;= \frac{x-ut/c^2}{\sqrt{1-u^2/c^2}} \\
+t&apos; &amp;amp;= \frac{t-ux/c^2}{\sqrt{1-u^2/c^2}}\\
+y&apos; &amp;amp;= y \\
+z&apos; &amp;amp;= z
+\end{aligned}
+\end{equation}\]
+
+Rotation
+
+\[\begin{equation}\label{rotation}
+\begin{aligned}
+x&apos; &amp;amp;= x\cos(\theta) + y\sin(\theta) \\
+y&apos; &amp;amp;= y\cos(\theta) - x\sin(\theta) \\
+z&apos; &amp;amp;= z \\
+t&apos; &amp;amp;= t
+\end{aligned}
+\end{equation}\]
+
+Equation \eqref{lorentz} is beautiful. So is equation \eqref{rotation}.
+
+References
+
+
+  The Feynman Lectures on Physics First Year Photos (1961‑62) Lecture 17
+  Lorentz transformation on Wikipedia
+
+</description>
+      <pubDate>Tue, 28 Nov 1961 00:00:00 -0500</pubDate>
+      <link>http://localhost:4000/lecture/notes/1961/11/28/space-time.html</link>
+      <guid isPermaLink="true">http://localhost:4000/lecture/notes/1961/11/28/space-time.html</guid>
+    </item>
+    
+    
+    <item>
+      <title>Appointed to the Rogers Commission investigating the Space Shuttle Challenger disaster</title>
+      <description>Appointed to the Rogers Commission investigating the Space Shuttle Challenger disaster</description>
+      <pubDate>Thu, 06 Feb 1986 00:00:00 -0500</pubDate>
+      <link>http://localhost:4000/allnews.html</link>
+    </item>
+    
+    <item>
+      <title>National Medal of Science awarded by President Carter</title>
+      <description>National Medal of Science awarded by President Carter</description>
+      <pubDate>Tue, 01 Jan 1980 00:00:00 -0500</pubDate>
+      <link>http://localhost:4000/allnews.html</link>
+    </item>
+    
+    <item>
+      <title>Awarded the Nobel Prize in Physics for contributions to quantum electrodynamics</title>
+      <description>Awarded the Nobel Prize in Physics for contributions to quantum electrodynamics</description>
+      <pubDate>Thu, 21 Oct 1965 00:00:00 -0400</pubDate>
+      <link>http://localhost:4000/allnews.html</link>
+    </item>
+    
+    <item>
+      <title>The Feynman Lectures on Physics begins publication</title>
+      <description>The Feynman Lectures on Physics begins publication</description>
+      <pubDate>Fri, 01 Sep 1961 00:00:00 -0400</pubDate>
+      <link>http://localhost:4000/allnews.html</link>
+    </item>
+    
+    <item>
+      <title>Delivered &apos;There&apos;s Plenty of Room at the Bottom&apos; talk at Caltech APS meeting</title>
+      <description>Delivered &apos;There&apos;s Plenty of Room at the Bottom&apos; talk at Caltech APS meeting</description>
+      <pubDate>Mon, 01 Jun 1959 00:00:00 -0400</pubDate>
+      <link>http://localhost:4000/allnews.html</link>
+    </item>
+    
+    <item>
+      <title>Joined the faculty at California Institute of Technology</title>
+      <description>Joined the faculty at California Institute of Technology</description>
+      <pubDate>Mon, 01 Jan 1951 00:00:00 -0500</pubDate>
+      <link>http://localhost:4000/allnews.html</link>
+    </item>
+    
+  </channel>
+</rss>

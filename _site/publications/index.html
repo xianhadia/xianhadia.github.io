@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications - Xian Hadia</title>
+  <meta name="description" content="Academic webpage of Xian Hadia">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Publications">
+  <meta property="og:description" content="Academic webpage of Xian Hadia">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:4000/publications/">
+  <meta property="og:image" content="http://localhost:4000/images/headshot.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Publications">
+  <meta name="twitter:description" content="Academic webpage of Xian Hadia">
+  <meta name="twitter:image" content="http://localhost:4000/images/headshot.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,700;0,8..60,800;1,8..60,400&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="http://localhost:4000/publications/">
+  <link rel="icon" href="http://localhost:4000/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="http://localhost:4000/favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="Xian Hadia" href="http://localhost:4000/feed.xml">
+
+  <!-- Accent color from config -->
+  
+  <style>
+    :root { --accent: #1a7a6d; --accent-hover: #1a7a6d; }
+  </style>
+  
+
+  <!-- Dark mode: apply saved theme before paint to prevent flash -->
+  <script>
+    (function() {
+      var darkMode = true;
+      if (!darkMode) return;
+      var saved = localStorage.getItem('theme');
+      if (saved) {
+        document.documentElement.setAttribute('data-bs-theme', saved);
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-bs-theme', 'dark');
+      }
+    })();
+  </script>
+
+  
+
+  <script>
+MathJax = {
+    tex: {
+    inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+    tags: 'ams'  // should be 'ams', 'none', or 'all' }. This line makes the equation numbering and labeling work
+    }, 
+    svg: {
+    fontCache: 'global'
+    }
+};
+</script>
+<script
+    type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+</script> 
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Publications",
+    "url": "http://localhost:4000/publications/",
+    "description": "Academic webpage of Xian Hadia",
+    "author": {
+      "@type": "Person",
+      "name": "Xian Hadia",
+      "jobTitle": "PhD Stududent and Electrical Engineer",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Georgia Institute of Technology"
+      },
+      "sameAs": ["https://scholar.google.com/citations?user=faPctLoAAAAJ&hl=en", "https://github.com/xianhadia"]
+    }
+  }
+  </script>
+</head>
+
+
+  <body>
+
+    <nav class="navbar sticky-top navbar-expand-md">
+  <div class="container" style="max-width: var(--container-max);">
+    <a class="navbar-brand" href="http://localhost:4000/">
+      <img src="http://localhost:4000/favicon.svg" width="24" height="24" class="d-inline-block align-text-top" alt="" style="border-radius: 5px;">
+      Xian Hadia
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:4000/">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:4000/about">About</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link active" href="http://localhost:4000/publications">Publications</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:4000/research">Research</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:4000/blogs">Blogs</a>
+        </li>
+        
+      </ul>
+      <div class="d-flex align-items-center" style="gap: var(--space-2);">
+        <button class="search-toggle" id="searchToggle" aria-label="Search site">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        
+        <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </button>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Search overlay -->
+<div class="search-overlay" id="searchOverlay">
+<div class="search-modal">
+<div class="search-input-wrapper">
+<i class="fa-solid fa-magnifying-glass search-input-icon"></i>
+<input type="text" class="search-input" id="searchInput" placeholder="Search pages..." autocomplete="off">
+<kbd class="search-kbd">ESC</kbd>
+</div>
+<div class="search-results" id="searchResults"></div>
+</div>
+</div>
+
+
+    <main class="site-container">
+      <div class="fade-in-section">
+  <h2 id="publications">Publications</h2>
+
+<p><input type="text" class="pub-search" id="pubSearch" placeholder="Filter by title, author, or year..." /></p>
+
+<div class="section-card" id="pubList">
+  <h3>Preprints</h3>
+
+  <ol class="bibliography" reversed="reversed"><li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman06">Feynman, R. P., &amp; Cline, J. M. <i>Feynman lectures on the strong interactions</i>. arXiv:2006.08594.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman06">Feynman, R. P., &amp; Cline, J. M. <i>Feynman lectures on the strong interactions</i>. arXiv:2006.08594.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+    <a href="http://localhost:4000/papers/feynman06.pdf" target="_blank" class="btn-pill btn-pdf">PDF</a>
+    
+
+    
+      
+      <a href="https://arxiv.org/abs/2006.08594" target="_blank" class="btn-pill btn-arxiv">arXiv</a>
+      
+    
+
+    
+    <button class="btn-pill btn-bib" data-toggle-target="bib-feynman06">BIB</button>
+    
+
+    
+    <button class="btn-pill btn-abstract" data-toggle-target="abs-feynman06">Abstract</button>
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman06">
+    <pre>@unpublished{feynman06,
+  author = {Feynman, R. P. and Cline, J. M.},
+  title = {Feynman lectures on the strong interactions},
+  note = {arXiv:2006.08594},
+  doi = {2006.08594},
+  file = {feynman06.pdf}
+}
+</pre>
+  </div>
+  
+
+  
+  <div class="pub-collapse" id="abs-feynman06">
+    <pre>These twenty-two lectures, with exercises, comprise the extent of what was meant to be a full-year graduate-level course on the strong interactions and QCD, given at Caltech in 1987-88. The course was cut short by the illness that led to Feynman’s death. Several of the lectures were finalized in collaboration with Feynman for an anticipated monograph based on the course. The others, while retaining Feynman’s idiosyncrasies, are revised similarly to those he was able to check.</pre>
+  </div>
+  
+</div>
+</li></ol>
+
+  <h3>Refereed Journal Articles</h3>
+
+  <ol class="bibliography" reversed="reversed"><li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1982simulating">Feynman, R. P. (1982). Simulating physics with computers. <i>International Journal of Theoretical Physics</i>, <i>21</i>(6–7), 467–488.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1982simulating">Feynman, R. P. (1982). Simulating physics with computers. <i>International Journal of Theoretical Physics</i>, <i>21</i>(6–7), 467–488.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+      
+      <a href="http://doi.org/10.1007/BF02650179" target="_blank" class="btn-pill btn-doi">DOI</a>
+      
+    
+
+    
+    <button class="btn-pill btn-bib" data-toggle-target="bib-feynman1982simulating">BIB</button>
+    
+
+    
+    <button class="btn-pill btn-abstract" data-toggle-target="abs-feynman1982simulating">Abstract</button>
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1982simulating">
+    <pre>@article{feynman1982simulating,
+  title = {Simulating physics with computers},
+  author = {Feynman, R. P.},
+  journal = {International Journal of Theoretical Physics},
+  volume = {21},
+  number = {6--7},
+  pages = {467--488},
+  year = {1982},
+  doi = {10.1007/BF02650179}
+}
+</pre>
+  </div>
+  
+
+  
+  <div class="pub-collapse" id="abs-feynman1982simulating">
+    <pre>A digital computer is generally believed to be an efficient universal computing device; that is, it is believed to be able to simulate any physical computing device with an increase in computation time by at most a polynomial factor. This may not be true when quantum mechanics is taken into consideration.</pre>
+  </div>
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1969partons">Feynman, R. P. (1969). Very high-energy collisions of hadrons. <i>Physical Review Letters</i>, <i>23</i>(24), 1415–1417.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1969partons">Feynman, R. P. (1969). Very high-energy collisions of hadrons. <i>Physical Review Letters</i>, <i>23</i>(24), 1415–1417.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+      
+      <a href="http://doi.org/10.1103/PhysRevLett.23.1415" target="_blank" class="btn-pill btn-doi">DOI</a>
+      
+    
+
+    
+    <button class="btn-pill btn-bib" data-toggle-target="bib-feynman1969partons">BIB</button>
+    
+
+    
+    <button class="btn-pill btn-abstract" data-toggle-target="abs-feynman1969partons">Abstract</button>
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1969partons">
+    <pre>@article{feynman1969partons,
+  title = {Very high-energy collisions of hadrons},
+  author = {Feynman, R. P.},
+  journal = {Physical Review Letters},
+  volume = {23},
+  number = {24},
+  pages = {1415--1417},
+  year = {1969},
+  doi = {10.1103/PhysRevLett.23.1415}
+}
+</pre>
+  </div>
+  
+
+  
+  <div class="pub-collapse" id="abs-feynman1969partons">
+    <pre>A model for the description of high-energy collisions of hadrons is proposed. In this model hadrons are composed of point-like constituents, called partons.</pre>
+  </div>
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1963theory">Feynman, R. P., &amp; Vernon, F. L. (1963). The theory of a general quantum system interacting with a linear dissipative system. <i>Annals of Physics</i>, <i>24</i>, 118–173.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1963theory">Feynman, R. P., &amp; Vernon, F. L. (1963). The theory of a general quantum system interacting with a linear dissipative system. <i>Annals of Physics</i>, <i>24</i>, 118–173.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+      
+      <a href="http://doi.org/10.1016/0003-4916(63)90068-X" target="_blank" class="btn-pill btn-doi">DOI</a>
+      
+    
+
+    
+    <button class="btn-pill btn-bib" data-toggle-target="bib-feynman1963theory">BIB</button>
+    
+
+    
+    <button class="btn-pill btn-abstract" data-toggle-target="abs-feynman1963theory">Abstract</button>
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1963theory">
+    <pre>@article{feynman1963theory,
+  title = {The theory of a general quantum system interacting with a linear dissipative system},
+  author = {Feynman, R. P. and Vernon, F. L.},
+  journal = {Annals of Physics},
+  volume = {24},
+  pages = {118--173},
+  year = {1963},
+  doi = {10.1016/0003-4916(63)90068-X}
+}
+</pre>
+  </div>
+  
+
+  
+  <div class="pub-collapse" id="abs-feynman1963theory">
+    <pre>A formalism has been developed, using Feynman’s space-time formulation of nonrelativistic quantum mechanics whereby the behavior of a system of interest, which is coupled to other external quantum systems, may be calculated in terms of its own variables only.</pre>
+  </div>
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1957superfluidity">Feynman, R. P. (1957). Superfluidity and superconductivity. <i>Reviews of Modern Physics</i>, <i>29</i>(2), 205–212.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1957superfluidity">Feynman, R. P. (1957). Superfluidity and superconductivity. <i>Reviews of Modern Physics</i>, <i>29</i>(2), 205–212.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+      
+      <a href="http://doi.org/10.1103/RevModPhys.29.205" target="_blank" class="btn-pill btn-doi">DOI</a>
+      
+    
+
+    
+    <button class="btn-pill btn-bib" data-toggle-target="bib-feynman1957superfluidity">BIB</button>
+    
+
+    
+    <button class="btn-pill btn-abstract" data-toggle-target="abs-feynman1957superfluidity">Abstract</button>
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1957superfluidity">
+    <pre>@article{feynman1957superfluidity,
+  title = {Superfluidity and superconductivity},
+  author = {Feynman, R. P.},
+  journal = {Reviews of Modern Physics},
+  volume = {29},
+  number = {2},
+  pages = {205--212},
+  year = {1957},
+  doi = {10.1103/RevModPhys.29.205}
+}
+</pre>
+  </div>
+  
+
+  
+  <div class="pub-collapse" id="abs-feynman1957superfluidity">
+    <pre>A discussion of the relationship between superfluidity and superconductivity from the point of view of quantum mechanics.</pre>
+  </div>
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1956superfluidity">Feynman, R. P., &amp; Cohen, M. (1956). Energy spectrum of the excitations in liquid helium. <i>Physical Review</i>, <i>102</i>(5), 1189.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1956superfluidity">Feynman, R. P., &amp; Cohen, M. (1956). Energy spectrum of the excitations in liquid helium. <i>Physical Review</i>, <i>102</i>(5), 1189.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+      
+      <a href="http://doi.org/10.1103/PhysRev.102.1189" target="_blank" class="btn-pill btn-doi">DOI</a>
+      
+    
+
+    
+    <button class="btn-pill btn-bib" data-toggle-target="bib-feynman1956superfluidity">BIB</button>
+    
+
+    
+    <button class="btn-pill btn-abstract" data-toggle-target="abs-feynman1956superfluidity">Abstract</button>
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1956superfluidity">
+    <pre>@article{feynman1956superfluidity,
+  title = {Energy spectrum of the excitations in liquid helium},
+  author = {Feynman, R. P. and Cohen, M.},
+  journal = {Physical Review},
+  volume = {102},
+  number = {5},
+  pages = {1189},
+  year = {1956},
+  doi = {10.1103/PhysRev.102.1189}
+}
+</pre>
+  </div>
+  
+
+  
+  <div class="pub-collapse" id="abs-feynman1956superfluidity">
+    <pre>A variational calculation of the energy spectrum of excitations in liquid helium is presented, improving upon previous results by including backflow corrections.</pre>
+  </div>
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1954atomic">Feynman, R. P. (1954). Atomic theory of liquid helium near absolute zero. <i>Physical Review</i>, <i>93</i>(6), 1301.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1954atomic">Feynman, R. P. (1954). Atomic theory of liquid helium near absolute zero. <i>Physical Review</i>, <i>93</i>(6), 1301.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+      
+      <a href="http://doi.org/10.1103/PhysRev.93.99" target="_blank" class="btn-pill btn-doi">DOI</a>
+      
+    
+
+    
+    <button class="btn-pill btn-bib" data-toggle-target="bib-feynman1954atomic">BIB</button>
+    
+
+    
+    <button class="btn-pill btn-abstract" data-toggle-target="abs-feynman1954atomic">Abstract</button>
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1954atomic">
+    <pre>@article{feynman1954atomic,
+  title = {Atomic theory of liquid helium near absolute zero},
+  author = {Feynman, R. P.},
+  journal = {Physical Review},
+  volume = {93},
+  number = {6},
+  pages = {1301},
+  year = {1954},
+  doi = {10.1103/PhysRev.93.99}
+}
+</pre>
+  </div>
+  
+
+  
+  <div class="pub-collapse" id="abs-feynman1954atomic">
+    <pre>The properties of liquid helium near absolute zero are analyzed from first principles using quantum mechanics.</pre>
+  </div>
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1953atomic">Feynman, R. P. (1953). Atomic theory of the λtransition in helium. <i>Physical Review</i>, <i>91</i>(6), 1291–1301.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1953atomic">Feynman, R. P. (1953). Atomic theory of the λtransition in helium. <i>Physical Review</i>, <i>91</i>(6), 1291–1301.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+      
+      <a href="http://doi.org/10.1103/PhysRev.91.1291" target="_blank" class="btn-pill btn-doi">DOI</a>
+      
+    
+
+    
+    <button class="btn-pill btn-bib" data-toggle-target="bib-feynman1953atomic">BIB</button>
+    
+
+    
+    <button class="btn-pill btn-abstract" data-toggle-target="abs-feynman1953atomic">Abstract</button>
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1953atomic">
+    <pre>@article{feynman1953atomic,
+  title = {Atomic theory of the $\lambda$ transition in helium},
+  author = {Feynman, R. P.},
+  journal = {Physical Review},
+  volume = {91},
+  number = {6},
+  pages = {1291--1301},
+  year = {1953},
+  doi = {10.1103/PhysRev.91.1291}
+}
+</pre>
+  </div>
+  
+
+  
+  <div class="pub-collapse" id="abs-feynman1953atomic">
+    <pre>A theory of the transition in liquid helium is developed, based on the assumption that the wave function for the system of N helium atoms can be written as a sum over permutations.</pre>
+  </div>
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1950mathematical">Feynman, R. P. (1950). Mathematical formulation of the quantum theory of electromagnetic interaction. <i>Physical Review</i>, <i>80</i>(3), 440–457.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1950mathematical">Feynman, R. P. (1950). Mathematical formulation of the quantum theory of electromagnetic interaction. <i>Physical Review</i>, <i>80</i>(3), 440–457.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+      
+      <a href="http://doi.org/10.1103/PhysRev.80.440" target="_blank" class="btn-pill btn-doi">DOI</a>
+      
+    
+
+    
+    <button class="btn-pill btn-bib" data-toggle-target="bib-feynman1950mathematical">BIB</button>
+    
+
+    
+    <button class="btn-pill btn-abstract" data-toggle-target="abs-feynman1950mathematical">Abstract</button>
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1950mathematical">
+    <pre>@article{feynman1950mathematical,
+  title = {Mathematical formulation of the quantum theory of electromagnetic interaction},
+  author = {Feynman, R. P.},
+  journal = {Physical Review},
+  volume = {80},
+  number = {3},
+  pages = {440--457},
+  year = {1950},
+  doi = {10.1103/PhysRev.80.440}
+}
+</pre>
+  </div>
+  
+
+  
+  <div class="pub-collapse" id="abs-feynman1950mathematical">
+    <pre>The validity of the rules given in previous papers for the solution of problems in quantum electrodynamics is established. Starting with Fock’s formulation of the method of second quantization, a formulation of quantum electrodynamics is obtained which is entirely equivalent to the formulation of Tomonaga and Schwinger.</pre>
+  </div>
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1949spacetime">Feynman, R. P. (1949). Space-time approach to quantum electrodynamics. <i>Physical Review</i>, <i>76</i>(6), 769–789.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1949spacetime">Feynman, R. P. (1949). Space-time approach to quantum electrodynamics. <i>Physical Review</i>, <i>76</i>(6), 769–789.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+      
+      <a href="http://doi.org/10.1103/PhysRev.76.769" target="_blank" class="btn-pill btn-doi">DOI</a>
+      
+    
+
+    
+    <button class="btn-pill btn-bib" data-toggle-target="bib-feynman1949spacetime">BIB</button>
+    
+
+    
+    <button class="btn-pill btn-abstract" data-toggle-target="abs-feynman1949spacetime">Abstract</button>
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1949spacetime">
+    <pre>@article{feynman1949spacetime,
+  title = {Space-time approach to quantum electrodynamics},
+  author = {Feynman, R. P.},
+  journal = {Physical Review},
+  volume = {76},
+  number = {6},
+  pages = {769--789},
+  year = {1949},
+  doi = {10.1103/PhysRev.76.769}
+}
+</pre>
+  </div>
+  
+
+  
+  <div class="pub-collapse" id="abs-feynman1949spacetime">
+    <pre>In this paper two things are done. (1) It is shown that a considerable simplification can be attained in writing down matrix elements for complex processes in electrodynamics. (2) A point of view is given which is useful in these and other problems involving Dirac matrices.</pre>
+  </div>
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1949space">Feynman, R. P. (1949). The theory of positrons. <i>Physical Review</i>, <i>76</i>(6), 749–759.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1949space">Feynman, R. P. (1949). The theory of positrons. <i>Physical Review</i>, <i>76</i>(6), 749–759.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+      
+      <a href="http://doi.org/10.1103/PhysRev.76.749" target="_blank" class="btn-pill btn-doi">DOI</a>
+      
+    
+
+    
+    <button class="btn-pill btn-bib" data-toggle-target="bib-feynman1949space">BIB</button>
+    
+
+    
+    <button class="btn-pill btn-abstract" data-toggle-target="abs-feynman1949space">Abstract</button>
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1949space">
+    <pre>@article{feynman1949space,
+  title = {The theory of positrons},
+  author = {Feynman, R. P.},
+  journal = {Physical Review},
+  volume = {76},
+  number = {6},
+  pages = {749--759},
+  year = {1949},
+  doi = {10.1103/PhysRev.76.749}
+}
+</pre>
+  </div>
+  
+
+  
+  <div class="pub-collapse" id="abs-feynman1949space">
+    <pre>The problem of the behavior of positrons and electrons in given external potentials, neglecting their mutual interaction, is analyzed by replacing the theory of holes by a reinterpretation of the solutions of the Dirac equation. It is possible to write down a complete solution of the problem in terms of boundary conditions on the wave function.</pre>
+  </div>
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1939forces">Feynman, R. P. (1939). Forces in molecules. <i>Physical Review</i>, <i>56</i>(4), 340.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1939forces">Feynman, R. P. (1939). Forces in molecules. <i>Physical Review</i>, <i>56</i>(4), 340.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+    <a href="http://localhost:4000/papers/feynman39.pdf" target="_blank" class="btn-pill btn-pdf">PDF</a>
+    
+
+    
+      
+      <a href="http://doi.org/10.1103/PhysRev.56.340" target="_blank" class="btn-pill btn-doi">DOI</a>
+      
+    
+
+    
+    <button class="btn-pill btn-bib" data-toggle-target="bib-feynman1939forces">BIB</button>
+    
+
+    
+    <button class="btn-pill btn-abstract" data-toggle-target="abs-feynman1939forces">Abstract</button>
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1939forces">
+    <pre>@article{feynman1939forces,
+  title = {Forces in molecules},
+  author = {Feynman, R. P.},
+  journal = {Physical Review},
+  volume = {56},
+  number = {4},
+  pages = {340},
+  year = {1939},
+  doi = {10.1103/PhysRev.56.340},
+  file = {feynman39.pdf}
+}
+</pre>
+  </div>
+  
+
+  
+  <div class="pub-collapse" id="abs-feynman1939forces">
+    <pre>Formulas have been developed to calculate the forces in a molecular system directly, rather than indirectly through the agency of energy. This permits an independent calculation of the slope of the curves of energy vs. position of the nuclei, and may thus increase the accuracy, or decrease the labor involved in the calculation of these curves.</pre>
+  </div>
+  
+</div>
+</li></ol>
+
+  <h3>Refereed Conference Proceedings</h3>
+
+  <ol class="bibliography" reversed="reversed"><li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1985quantum">Feynman, R. P. (1985). Quantum mechanical computers. <i>Optics News</i>, <i>11</i>, 11–20.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1985quantum">Feynman, R. P. (1985). Quantum mechanical computers. <i>Optics News</i>, <i>11</i>, 11–20.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+
+    
+    <button class="btn-pill btn-bib" data-toggle-target="bib-feynman1985quantum">BIB</button>
+    
+
+    
+    <button class="btn-pill btn-abstract" data-toggle-target="abs-feynman1985quantum">Abstract</button>
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1985quantum">
+    <pre>@inproceedings{feynman1985quantum,
+  title = {Quantum mechanical computers},
+  author = {Feynman, R. P.},
+  booktitle = {Optics News},
+  volume = {11},
+  pages = {11--20},
+  year = {1985}
+}
+</pre>
+  </div>
+  
+
+  
+  <div class="pub-collapse" id="abs-feynman1985quantum">
+    <pre>The theory of quantum mechanical computers is discussed, examining how the uncertainty principle limits computers and examining the simplest quantum mechanical computing device.</pre>
+  </div>
+  
+</div>
+</li>
+<li><div class="pub-entry" data-pub-searchable="">
+  <div class="text-justify"><span id="feynman1981plenty">Feynman, R. P. (1960). There’s plenty of room at the bottom. <i>Miniaturization</i>, 282–296.</span></div>
+
+  <!-- You can use the below to make your name bold -->
+  <!-- <div class="text-justify"><span id="feynman1981plenty">Feynman, R. P. (1960). There’s plenty of room at the bottom. <i>Miniaturization</i>, 282–296.</span></div> -->
+
+  
+  
+
+  <div class="pub-actions">
+    
+
+    
+
+    
+    <button class="btn-pill btn-bib" data-toggle-target="bib-feynman1981plenty">BIB</button>
+    
+
+    
+    <button class="btn-pill btn-abstract" data-toggle-target="abs-feynman1981plenty">Abstract</button>
+    
+  </div>
+
+  
+  <div class="pub-collapse" id="bib-feynman1981plenty">
+    <pre>@inproceedings{feynman1981plenty,
+  title = {There's plenty of room at the bottom},
+  author = {Feynman, R. P.},
+  booktitle = {Miniaturization},
+  pages = {282--296},
+  year = {1960}
+}
+</pre>
+  </div>
+  
+
+  
+  <div class="pub-collapse" id="abs-feynman1981plenty">
+    <pre>An invitation to enter a new field of physics. The principles of physics, as far as I can see, do not speak against the possibility of maneuvering things atom by atom.</pre>
+  </div>
+  
+</div>
+</li></ol>
+</div>
+
+</div>
+
+    </main>
+
+    <footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <h5>About</h5>
+      <p>
+        Xian Hadia<br>
+        PhD Stududent and Electrical Engineer<br>
+        Georgia Institute of Technology
+      </p>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <p>
+        <a href="mailto:xhadia3@gatech.edu"><i class="fa-solid fa-envelope"></i> xhadia3@gatech.edu</a><br>
+        <a href="https://github.com/xianhadia"><i class="fa-brands fa-github"></i> GitHub</a><br>
+      </p>
+    </div>
+    <div>
+      <h5>Links</h5>
+      <p>
+        <a href="https://scholar.google.com/citations?user=faPctLoAAAAJ&hl=en"><i class="ai ai-google-scholar"></i> Google Scholar</a><br>
+        
+        <a href="https://github.com/sbryngelson/academic-website-template"><i class="fa-brands fa-github"></i> Use this template!</a>
+      </p>
+    </div>
+  </div>
+  <div class="footer-grid">
+    <div class="footer-copyright" style="grid-column: 1 / -1;">
+      &copy; 2026 Xian Hadia
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/javascript/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="/assets/js/site.min.js"></script>
+
+
+  </body>
+
+</html>

@@ -2,11 +2,11 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD Candidate in Computational Science and Engineering at <a href='https://gatech.edu/'>Georgia Tech</a>
+subtitle: PhD Candidate at <a href='https://gatech.edu/'>Georgia Tech</a> & Electrical Engineer
 
 profile:
   align: right
-  image: ""
+  image: "prof_pic.jpg"
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Georgia Institute of Technology</p>

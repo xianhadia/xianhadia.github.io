@@ -6,21 +6,21 @@ subtitle: PhD Candidate in Computational Science and Engineering at <a href='htt
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: em_simulation.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Georgia Institute of Technology</p>
     <p>School of Computational Science and Engineering</p>
     <p>Atlanta, GA 30332</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false # includes a list of papers marked as "selected={true}"
+social: false # includes social icons at the bottom of the page
 
 announcements:
   enabled: false # includes a list of news items
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---

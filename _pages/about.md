@@ -25,8 +25,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a PhD Candidate in Computational Science and Engineering at Georgia Tech, advised by [Raphaël Pestourie](https://scholar.google.com/citations?user=Lxv3W74AAAAJ&hl=en). My research focuses on **inverse design in nanophotonics**, exploring the design and optimization of metasurfaces and waveguides for advanced optical applications.
+I am a PhD Candidate in Computational Science and Engineering at Georgia Tech, advised by [Raphaël Pestourie](https://scholar.google.com/citations?user=Lxv3W74AAAAJ&hl=en). My research focuses on **inverse design in nanophotonics** - particularly for metasurface and waveguide devices.
 
-My work centers on computational methods for solving inverse problems in electromagnetic design, combining **adjoint-based optimization**, **surrogate modeling**, and **scientific computing** techniques. I am skilled in full-wave electromagnetic simulations (FDTD, FDFD, RCWA) and have hands-on experience with optical metrology and instrumentation.
+My work centers on developing computational methods for solving complex inverse problems in electromagnetic design, bridging **adjoint-based optimization**, **surrogate modeling**, and **scientific computing**. I have extensive experience creating custom physics solvers utilizing various numerical methods (FDTD, FDFD, RCWA) as well as using commercial software like COMSOL Multiphysics and Ansys Lumerical. I also have experience leveraging high-performance computing (HPC) clusters for accelerated and accurate simulations. Complementing my theoretical background, I also have hands-on experience within labs for optical metrology and instrumentation for device characterization.
 
 **Keywords:** Nanophotonics · Inverse Design · Adjoint Optimization · Electromagnetic Simulation · Surrogate Models · Scientific Computing

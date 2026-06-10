@@ -6,7 +6,7 @@ subtitle: PhD Candidate in Computational Science and Engineering at <a href='htt
 
 profile:
   align: right
-  image: em_simulation.jpg
+  image: ""
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Georgia Institute of Technology</p>
@@ -20,7 +20,7 @@ announcements:
   enabled: false # includes a list of news items
 
 latest_posts:
-  enabled: false
+  enabled: true
   scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
@@ -30,3 +30,11 @@ I am a PhD Candidate in Computational Science and Engineering at Georgia Tech, a
 My work centers on developing computational methods for solving complex inverse problems in electromagnetic design, bridging **adjoint-based optimization**, **surrogate modeling**, and **scientific computing**. I have extensive experience creating custom physics solvers utilizing various numerical methods (FDTD, FDFD, RCWA) as well as using commercial software like COMSOL Multiphysics and Ansys Lumerical. I also have experience leveraging high-performance computing (HPC) clusters for accelerated and accurate simulations. Complementing my theoretical background, I also have hands-on experience within labs for optical metrology and instrumentation for device characterization.
 
 **Keywords:** Nanophotonics · Inverse Design · Adjoint Optimization · Electromagnetic Simulation · Surrogate Models · Scientific Computing
+
+<div style="margin: 2.5rem 0 1rem; text-align: center;">
+  <img
+    src="{{ '/assets/img/em_simulation.jpg' | relative_url }}"
+    alt="Electromagnetic simulation"
+    style="display: inline-block; width: min(100%, 760px); max-width: 760px; height: auto; border: 0; box-shadow: none; border-radius: 0; background: transparent;"
+  />
+</div>

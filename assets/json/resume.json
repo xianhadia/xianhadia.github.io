@@ -1,0 +1,168 @@
+{
+  "basics": {
+    "name": "Xian M. D. Hadia",
+    "label": "PhD Candidate in Computational Science and Engineering",
+    "image": "",
+    "email": "xhadia3@gatech.edu",
+    "phone": "+1 601-618-6269",
+    "summary": "Engineer-in-Training (EIT) and PhD Candidate advised by Raphaël Pestourie at Georgia Tech, conducting research on inverse design in nanophotonics. Skilled in electromagnetic simulation, adjoint optimization, and surrogate modeling with hands-on laboratory experience.",
+    "location": {
+      "address": "School of Computational Science and Engineering",
+      "city": "Atlanta",
+      "countryCode": "US",
+      "region": "Georgia"
+    },
+    "profiles": [
+      {
+        "network": "Google Scholar",
+        "url": "https://scholar.google.com/citations?user=faPctLoAAAAJ&hl=en&oi=sra"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Georgia Institute of Technology",
+      "position": "Research Assistant & Teaching Assistant",
+      "location": "Atlanta, GA",
+      "startDate": "2022-01-01",
+      "endDate": "2026-06-09",
+      "summary": "Conducting research on inverse design in nanophotonics and teaching graduate courses.",
+      "highlights": [
+        "Designed metalenses for focusing, holography, and wavelength multiplexing using adjoint-based optimization",
+        "Developed high-fidelity physics simulations (FDTD, RCWA) using COMSOL and custom Julia/Python code",
+        "Trained and deployed surrogate models for electromagnetic scattering and heat transfer problems",
+        "Taught computational photography and machine learning to graduate students"
+      ]
+    },
+    {
+      "name": "Corning Inc.",
+      "position": "Fiber Optics Intern",
+      "location": "Hickory, NC",
+      "startDate": "2025-06-01",
+      "endDate": "2025-08-31",
+      "summary": "Automated optical metrology systems and developed software interfaces for precision measurement.",
+      "highlights": [
+        "Automated interferometer system integrating laser, optical switches, and data acquisition",
+        "Developed software interfaces for device control and synchronized communication protocols",
+        "Built user-friendly applications for technicians to configure tests and automate strain calculations",
+        "Reduced test time by 8× and transformed multi-operator workflow to single-operator process"
+      ]
+    },
+    {
+      "name": "U.S. Army Corps of Engineers",
+      "position": "Research Electrical Engineer & Engineering Intern",
+      "location": "Vicksburg, MS",
+      "startDate": "2017-05-01",
+      "endDate": "2024-08-31",
+      "summary": "Designed and deployed advanced measurement systems in field environments and anechoic chambers.",
+      "highlights": [
+        "Designed and deployed measurement systems (antennas, cameras, signal generators, frequency analyzers)",
+        "Designed and implemented ground-based synthetic aperture radar (SAR) rail system",
+        "Developed high-fidelity lidar and radar sensor models for autonomous-vehicle simulations"
+      ]
+    },
+    {
+      "name": "Mississippi College",
+      "position": "Tutor and Lab Assistant",
+      "location": "Clinton, MS",
+      "startDate": "2014-02-01",
+      "endDate": "2017-07-31",
+      "summary": "Assisted in teaching physics, circuit theory, and microcontrollers to undergraduate students.",
+      "highlights": [
+        "Taught physics, circuit theory, and microcontrollers",
+        "Led hands-on lab sessions and mentored students in circuit troubleshooting"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Georgia Institute of Technology",
+      "location": "Atlanta, GA",
+      "area": "Computational Science and Engineering",
+      "studyType": "Doctor of Philosophy",
+      "startDate": "2024-01-01",
+      "endDate": "2028-05-01",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Georgia Institute of Technology",
+      "location": "Atlanta, GA",
+      "area": "Computer Science",
+      "studyType": "Master of Science",
+      "startDate": "2022-01-01",
+      "endDate": "2024-05-01",
+      "score": "4.0/4.0",
+      "courses": []
+    },
+    {
+      "institution": "Mississippi College",
+      "location": "Clinton, MS",
+      "area": "Electrical Engineering",
+      "studyType": "Bachelor of Science",
+      "startDate": "2017-01-01",
+      "endDate": "2021-05-01",
+      "score": "4.0/4.0",
+      "courses": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "Software",
+      "level": "Expert",
+      "keywords": [
+        "COMSOL Multiphysics",
+        "Ansys Lumerical",
+        "MEEP",
+        "LabVIEW",
+        "LTSpice"
+      ]
+    },
+    {
+      "name": "Numerical Methods",
+      "level": "Expert",
+      "keywords": [
+        "Finite-Difference Time-Domain (FDTD)",
+        "Finite-Difference Frequency-Domain (FDFD)",
+        "Rigorous Coupled-Wave Analysis (RCWA)",
+        "Finite Element Method (FEM)"
+      ]
+    },
+    {
+      "name": "Programming Languages",
+      "level": "Proficient",
+      "keywords": [
+        "Python",
+        "Julia",
+        "C",
+        "C++",
+        "MATLAB"
+      ]
+    },
+    {
+      "name": "Developer Tools",
+      "level": "Proficient",
+      "keywords": [
+        "Git",
+        "Docker",
+        "AWS"
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "name": "Harnessing Data Efficiency with a Fixed-Point Iteration Analogous to Adaptive Mesh Refinement",
+      "publisher": "SIAM Conference on Mathematics of Data Science (MDS24)",
+      "releaseDate": "2024-06-01",
+      "url": "",
+      "summary": "Poster presented at SIAM MDS24, Atlanta, GA"
+    },
+    {
+      "name": "Improving Surrogate Model Performance by Training Neural Operators on Full PDE Solution Data",
+      "publisher": "In Preparation for ICML 2026",
+      "releaseDate": "2026-01-01",
+      "url": "",
+      "summary": "Co-authored with R. Pestourie and L. Lu"
+    }
+  ]
+}

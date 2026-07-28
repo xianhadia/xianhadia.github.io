@@ -5,7 +5,7 @@ cv:
   phone: "+1 601-618-6269"
   location: Atlanta, GA
   image: ""
-  summary: PhD Candidate at Georgia Tech researching inverse design in nanophotonics, adjoint optimization, and electromagnetic simulation.
+  summary: 'PhD Candidate at Georgia Tech researching inverse design in nanophotonics, adjoint optimization, and electromagnetic simulation under the advisement of <a href="https://scholar.google.com/citations?user=Lxv3W74AAAAJ&hl=en">Raphaël Pestourie</a>.'
 
   social_networks:
     - network: GitHub
@@ -19,7 +19,7 @@ cv:
         studyType: Doctor of Philosophy
         start_date: 2024-01-01
         end_date: 2028-05-01
-        score: ""
+        score: In progress
         courses: ""
         highlights:
           - Advised by Raphaël Pestourie.
@@ -30,7 +30,7 @@ cv:
         studyType: Master of Science
         start_date: 2022-01-01
         end_date: 2024-05-01
-        score: 4.0 / 4.0
+        score: 4.0 / 4.0 GPA
         courses: ""
         highlights:
           - Completed graduate coursework in computing and simulation.
@@ -41,7 +41,7 @@ cv:
         studyType: Bachelor of Science
         start_date: 2017-01-01
         end_date: 2021-05-01
-        score: 4.0 / 4.0
+        score: 4.0 / 4.0 GPA
         courses: ""
         highlights:
           - Built a foundation in electromagnetics, instrumentation, and applied engineering.
@@ -52,11 +52,11 @@ cv:
         location: ""
         start_date: 2026-06-01
         end_date: 2026-08-31
-        summary: Improved the simulation and design suite by developing adjoint optimization and domain decomposition methods to expedite the iterative design flow.
+        summary: Performed large-scale inverse design of metasurfaces using domain decomposition techniques, reducing runtime while maintaining accuracy comparable to rigorous FDTD methods and producing fabricable designs.
         highlights:
-          - Improved the simulation and design suite for faster iterative design.
-          - Applied adjoint optimization to accelerate inverse design workflows.
-          - Developed domain decomposition methods to speed up large-scale simulation and optimization.
+          - Performed large-scale inverse design on metasurfaces using domain decomposition techniques.
+          - Reduced simulation time while achieving accuracy comparable to rigorous FDTD methods.
+          - Created fabricable metasurface designs suitable for downstream manufacturing.
 
       - company: Georgia Institute of Technology
         position: Research Assistant & Teaching Assistant
@@ -103,26 +103,6 @@ cv:
           - Led hands-on lab sessions and mentored students in troubleshooting complex circuits.
 
     Publications:
-      - title: Harnessing Data Efficiency with a Fixed-Point Iteration Analogous to Adaptive Mesh Refinement
-        authors:
-          - X. Hadia
-          - R. Pestourie
-          - L. Lu
-        publisher: SIAM Conference on Mathematics of Data Science (MDS24)
-        releaseDate: 2024-06-01
-        url: ""
-        summary: Poster presented at SIAM MDS24 in Atlanta, GA.
-
-      - title: Improving Surrogate Model Performance by Training Neural Operators on Full PDE Solution Data
-        authors:
-          - X. Hadia
-          - R. Pestourie
-          - L. Lu
-        publisher: In Preparation for ICML 2026
-        releaseDate: 2026-01-01
-        url: ""
-        summary: Co-authored work on surrogate model training from full PDE solution data.
-
       - title: Initial investigation of UAV swarm behaviors in a search-and-rescue scenario using reinforcement learning
         authors:
           - S. S. Carley
@@ -155,6 +135,16 @@ cv:
         releaseDate: 2023-01-01
         url: ""
         summary: Comparative evaluation strategies for deep learning models.
+
+      - title: Harnessing Data Efficiency with a Fixed-Point Iteration Analogous to Adaptive Mesh Refinement
+        authors:
+          - X. Hadia
+          - R. Pestourie
+          - L. Lu
+        publisher: SIAM Conference on Mathematics of Data Science (MDS24)
+        releaseDate: 2024-06-01
+        url: ""
+        summary: Poster presented at SIAM MDS24 in Atlanta, GA.
 
     Skills:
       - name: Software
@@ -189,4 +179,3 @@ cv:
           - Git
           - Docker
           - AWS
-

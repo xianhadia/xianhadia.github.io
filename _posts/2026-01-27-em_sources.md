@@ -6,6 +6,7 @@ tags:
   - electromagnetism
   - physics
   - academic
+math: true
 ---
 
 The causal chain of source $\longrightarrow$ field  $\longrightarrow$ observable reflects the factorization of physics into three components: excitations (sources), propagation through a medium (determined by materials and boundary conditions), and measuring quantities (observations). The notes within my classical electromagnetism section will follow this structure with the first section modeling sources.
@@ -204,7 +205,6 @@ recovering Coulomb’s law.
 </details>
 
 
-\
 This simple example highlights two complementary routes for solving Maxwell's equations: using the integral form together with symmetry arguments, or using the differential
 form and solving the resulting partial differential equations (here, Poisson's equation for $\phi$).
 

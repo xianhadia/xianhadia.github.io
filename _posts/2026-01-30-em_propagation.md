@@ -7,6 +7,7 @@ tags:
   - physics
   - optics
   - waves
+math: true
 ---
 
 Having established in Chapter 1 that sources ($\rho, \mathbf{J}$) give rise to electromagnetic fields, we now turn to the second link in the causal chain: **Propagation**.

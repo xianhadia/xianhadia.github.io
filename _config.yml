@@ -283,6 +283,31 @@ defaults:
       path: "assets"
     values:
       sitemap: false
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      _styles: |
+        .post-content,
+        #markdown-content {
+          min-width: 0;
+          max-width: 100%;
+        }
+
+        #markdown-content mjx-container[display="true"] {
+          max-width: 100%;
+          overflow-x: auto;
+          overflow-y: hidden;
+          padding-block: 0.2rem;
+        }
+
+        #markdown-content table {
+          display: block;
+          max-width: 100%;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
 
 sass:
   style: compressed

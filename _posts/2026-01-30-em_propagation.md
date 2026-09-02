@@ -163,7 +163,7 @@ The phase difference $$\delta$$ determines the polarization state:
 | Polarization | Condition | Description |
 | :--- | :--- | :--- |
 | **Linear** | $$\delta = 0$$ or $$\pi$$ | The tip of the vector traces a line. |
-| **Circular** | $$|E_{0x}| = |E_{0y}|$$ and $$\delta = \pm \pi/2$$ | The tip traces a circle. (Right or Left Handed). |
+| **Circular** | $$\lvert E_{0x} \rvert = \lvert E_{0y} \rvert$$ and $$\delta = \pm \pi/2$$ | The tip traces a circle. (Right or Left Handed). |
 | **Elliptical** | General Case | The tip traces an ellipse. |
 
 ## 2.6 Reflection and Refraction

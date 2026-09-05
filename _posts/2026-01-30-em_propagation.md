@@ -1,7 +1,7 @@
 ---
 title: "Electromagnetics: Propagation"
 date: 2026-01-30
-permalink: /posts/optics/em_02/
+permalink: /posts/em/propagation/
 tags:
   - electromagnetism
   - physics

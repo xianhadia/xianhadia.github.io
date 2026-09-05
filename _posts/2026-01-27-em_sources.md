@@ -1,7 +1,7 @@
 ---
 title: "Electromagnetics: Sources"
 date: 2026-01-27
-permalink: /posts/optics/em_01/
+permalink: /posts/em/sources/
 tags:
   - electromagnetism
   - physics
@@ -9,7 +9,7 @@ tags:
 math: true
 ---
 
-The causal chain of source $$\longrightarrow$$ field  $$\longrightarrow$$ observable reflects the factorization of physics into three components: excitations (sources), propagation through a medium (determined by materials and boundary conditions), and measuring quantities (observations). The notes within my classical electromagnetism section will follow this structure with the first section modeling sources.
+The causal chain of source $$\longrightarrow$$ field  $$\longrightarrow$$ observable reflects the factorization of physics into three components: excitations (sources), propagation through a medium (determined by materials and boundary conditions), and measuring quantities (observations). The notes follow this structure.
 
 ## 1.1 Maxwell’s Equations
 
@@ -50,11 +50,11 @@ $$
 \int_{S} \mathbf{B} \cdot d\mathbf{S} = \int_{V} \rho_m\, dV
 $$
 
-where $$V$$ is the volume enclosed by $$S$$. The magnetic charge densities and currents introduced above are not known to exist physically but including them now allows for symmetry within Maxwell's equations and enables later use of duality transformations.
+where $$V$$ is the volume enclosed by $$S$$. The magnetic charge densities and currents introduced above do not exist physically but they are a useful abstraction to include as they allow for symmetry within Maxwell's equations - a property that enables use of duality transformations.
 
 ## 1.2 Duality Transformations
 
-Maxwell’s equations in linear, isotropic media exhibit a striking symmetry. If we exchange electrical quantities with magnetic quantities (and vice versa), the form of the equations remains invariant. This allows us to solve a problem for an electric source ($$\mathbf{J}$$) and immediately know the solution for the corresponding magnetic source ($$\mathbf{M}$$) without have to solve for a completely new set of equations.
+Reference the equations in 1.1 and notice this: If we exchange electrical quantities with magnetic quantities (and vice versa), the form of the equations remains invariant. This allows us to solve a problem for an electric source ($$\mathbf{J}$$) and immediately know the solution for the corresponding magnetic source ($$\mathbf{M}$$) without have to solve for a completely new set of equations.
 
 The general duality transformation is a rotation in electromagnetic space. However, two specific variations are most common: **Mathematical Duality** (unit-agnostic) and **Scaled Duality** (unit-preserving).
 
@@ -81,7 +81,7 @@ $$
 <details>
 <summary><b>Example: From Hertzian Dipole to Small Loop</b></summary>
 
-A **Hertzian Dipole** is a wire of length $$l$$ (moment $$Il$$) oriented along the $$z$$-axis with an electric current $$I$$ . Its known far-field radiation is:
+A Hertzian Dipole is a wire of length $l$ (moment $Il$) oriented along the $z$-axis with an electric current $I$ . Its known far-field radiation is:
 
 $$
 \mathbf{E}_e = j\eta k I l \frac{e^{-jkr}}{4\pi r} \sin\theta \, \hat{\boldsymbol{\theta}}
@@ -90,30 +90,27 @@ $$
 \mathbf{H}_e = j k I l \frac{e^{-jkr}}{4\pi r} \sin\theta \, \hat{\boldsymbol{\phi}}
 $$
 
-We wish to find the fields of a **Small Loop Antenna** (a magnetic dipole). A small loop of area $$S$$ carrying current $$I_{loop}$$ is equivalent to a magnetic current element $$K l_{eq} = j\omega\mu I_{loop} S$$.
+We wish to find the fields of a Small Loop Antenna (a magnetic dipole). A small loop of area $S$ carrying current $I_{loop}$ is equivalent to a magnetic current element $K l_{eq} = j\omega\mu I_{loop} S$.
 
-Instead of solving Maxwell's equations from scratch, we use **Scaled Duality**.
+Instead of solving Maxwell's equations from scratch, we use Scaled Duality.
 
-**1. Identify the Source Transformation**
-The electric source magnitude is $$J_e \propto Il$$. The dual magnetic source is $$M_m$$. According to scaled duality:
-$$
-M_m = \eta (Il)
-$$
+1. Identify the Source Transformation
+The electric source magnitude is $J_e \propto Il$. The dual magnetic source is $M_m$. According to scaled duality $M_m = \eta (Il)$.
 
-**2. Transform the Fields**
-To find the electric field of the magnetic loop ($$\mathbf{E}_{loop}$$), we apply the scaled transformation to the dipole's magnetic field ($$\mathbf{H}_e$$):
+2. Transform the Fields
+To find the electric field of the magnetic loop ($\mathbf{E}_{loop}$), we apply the scaled transformation to the dipole's magnetic field ($\mathbf{H}_e$) so 
 
-$$
+$
 \mathbf{E}_{loop} = -\eta \mathbf{H}_e
-$$
+$
 
-Substituting the known expression for $$\mathbf{H}_e$$:
+Substituting the known expression for $\mathbf{H}_e$:
 
-$$
+$
 \mathbf{E}_{loop} = -\eta \left( j k (Il) \frac{e^{-jkr}}{4\pi r} \sin\theta \, \hat{\boldsymbol{\phi}} \right)
-$$
+$
 
-**3. Substitute the Dual Source**
+3. Substitute the Dual Source
 We must replace the old source magnitude $$(Il)$$ with the new source magnitude using $$Il = M_m / \eta$$:
 
 $$

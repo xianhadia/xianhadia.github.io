@@ -5,7 +5,7 @@ cv:
   phone: "+1 601-618-6269"
   location: Atlanta, GA
   image: ""
-  summary: 'PhD Candidate at Georgia Tech researching inverse design in nanophotonics, adjoint optimization, and electromagnetic simulation under the advisement of <a href="https://scholar.google.com/citations?user=Lxv3W74AAAAJ&hl=en">Raphaël Pestourie</a>.'
+  summary: 'Ph.D. candidate in Computational Science and Engineering at Georgia Tech, advised by <a href="https://scholar.google.com/citations?user=Lxv3W74AAAAJ&hl=en">Prof. Raphaël Pestourie</a>, specializing in large-scale inverse design for nanophotonics. Developing high-performance computational frameworks that bridge adjoint-based optimization, data-driven surrogate modeling, and scalable electromagnetic solvers.'
 
   social_networks:
     - network: GitHub
@@ -48,15 +48,15 @@ cv:
 
     Experience:
       - company: Quantinuum
-        position: Summer Intern
-        location: ""
+        position: Metasurface Design Intern
+        location: Broomfield, CO
         start_date: 2026-06-01
         end_date: 2026-08-31
-        summary: Performed large-scale inverse design of metasurfaces using domain decomposition techniques, reducing runtime while maintaining accuracy comparable to rigorous FDTD methods and producing fabricable designs.
+        summary: Developed high-performance electromagnetic simulation and inverse-design workflows for fabrication-constrained metasurfaces in trapped-ion quantum architectures.
         highlights:
-          - Performed large-scale inverse design on metasurfaces using domain decomposition techniques.
-          - Reduced simulation time while achieving accuracy comparable to rigorous FDTD methods.
-          - Created fabricable metasurface designs suitable for downstream manufacturing.
+          - Accelerated multi-GPU FDTD electromagnetic solvers using domain decomposition methods for large computational domains.
+          - Built high-throughput forward and adjoint simulation pipelines, reducing iteration runtimes from weeks to days.
+          - Designed multifunctional metasurfaces for focusing and collimation under foundry-ready fabrication constraints.
 
       - company: Georgia Institute of Technology
         position: Research Assistant & Teaching Assistant
@@ -152,6 +152,7 @@ cv:
         keywords:
           - COMSOL Multiphysics
           - Ansys Lumerical
+          - Tidy3D
           - MEEP
           - LabVIEW
           - LTSpice

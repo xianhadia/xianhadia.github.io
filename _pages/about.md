@@ -25,20 +25,30 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I'm a doctoral student in Computational Science and Engineering at <a href='https://gatech.edu/'>Georgia Tech</a>, advised by [Raphaël Pestourie](https://scholar.google.com/citations?user=Lxv3W74AAAAJ&hl=en). My research focuses on **inverse design in nanophotonics**. 
+I am a Ph.D. candidate in Computational Science and Engineering at <a href='https://gatech.edu/'>Georgia Tech</a>, advised by [Prof. Raphaël Pestourie](https://scholar.google.com/citations?user=Lxv3W74AAAAJ&hl=en), specializing in large-scale inverse design for nanophotonics. My research focuses on developing high-performance computational frameworks to solve complex electromagnetic inverse problems, bridging adjoint-based optimization, data-driven surrogate modeling, and scalable numerical solvers.
 
-My work centers on developing computational methods for solving complex inverse problems in electromagnetic design, bridging **adjoint-based optimization**, **surrogate modeling**, and **scientific computing**. I have extensive experience creating custom physics solvers utilizing various numerical methods (FDTD, FDFD, RCWA) as well as using commercial software like COMSOL Multiphysics and Ansys Lumerical. I also have experience leveraging high-performance computing (HPC) clusters for accelerated and accurate simulations. Complementing my theoretical background, I also have hands-on experience within labs for optical metrology and instrumentation for device characterization.
+I build custom physics solvers utilizing finite-difference methods (FDTD, FDFD), finite element methods (FEM), and rigorous coupled-wave analysis (RCWA), alongside tools like Tidy3D, MEEP, COMSOL, and Ansys Lumerical. To make large-area nanophotonic device optimization computationally tractable, I architect high-performance computing (HPC) workflows that leverage multi-GPU parallelization, domain decomposition, and tensor-based linear algebra formulations. Beyond theoretical and algorithmic development, I bridge simulation with hardware by designing fabrication-constrained metasurfaces—for beamforming, focusing, and arbitrary wavefront engineering—and validating them via hands-on cleanroom lithography, optical metrology, and experimental bench characterization.
 
-I have successfully applied my research by designing fabrication-ready metasurfaces for applications ranging from focusing and beamforming to arbitrary wavefront manipulation while overseeing the lithographic fabrication process and experimental characterization.
+**Keywords:** Nanophotonics · Inverse Design · Adjoint Optimization · Computational Electromagnetics · Surrogate Models · Scientific Computing
 
-**Keywords:** Nanophotonics · Inverse Design · Adjoint Optimization · Electromagnetic Simulation · Surrogate Models · Scientific Computing
-
-<div style="margin: 2.5rem 0 1rem; text-align: center;">
+<figure style="margin: 2.5rem 0 1.5rem; text-align: center;">
   <img
     src="{{ '/assets/img/em_simulation.jpg' | relative_url }}"
     alt="Electromagnetic simulation"
     style="display: inline-block; width: min(100%, 760px); max-width: 760px; height: auto; border: 0; box-shadow: none; border-radius: 0; background: transparent;"
   />
-</div>
+  <figcaption style="margin-top: 0.75rem; color: var(--global-text-color-light); font-size: 0.9rem;">
+    Helmholtz equation, \(\nabla^2 \mathbf{E} + k^2 \mathbf{E} = 0\), and visualization with lateral boundary conditions.
+  </figcaption>
+</figure>
 
-
+<figure style="margin: 1.5rem 0 2.5rem; text-align: center;">
+  <img
+    src="{{ '/assets/focusing_grating_demo.gif' | relative_url }}"
+    alt="FDTD visualization of a grating coupler"
+    style="display: inline-block; width: min(100%, 760px); max-width: 760px; height: auto; border: 0; box-shadow: none; border-radius: 0; background: transparent;"
+  />
+  <figcaption style="margin-top: 0.75rem; color: var(--global-text-color-light); font-size: 0.9rem;">
+    Full wave validation of grating coupler design for focusing.
+  </figcaption>
+</figure>

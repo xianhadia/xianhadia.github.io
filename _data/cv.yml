@@ -33,6 +33,7 @@ cv:
         score: 4.0 / 4.0 GPA
         courses: ""
         highlights:
+          - 'GPA: 4.0 / 4.0.'
           - Completed graduate coursework in computing and simulation.
 
       - institution: Mississippi College
@@ -44,6 +45,7 @@ cv:
         score: 4.0 / 4.0 GPA
         courses: ""
         highlights:
+          - 'GPA: 4.0 / 4.0.'
           - Built a foundation in electromagnetics, instrumentation, and applied engineering.
 
     Experience:

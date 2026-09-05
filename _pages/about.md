@@ -44,6 +44,7 @@ I build custom physics solvers utilizing finite-difference methods (FDTD, FDFD),
 
 <figure style="margin: 1.5rem 0 2.5rem; text-align: center;">
   <img
+    id="grating-coupler-gif"
     src="{{ '/assets/focusing_grating_demo.gif' | relative_url }}"
     alt="FDTD visualization of a grating coupler"
     style="display: inline-block; width: min(100%, 760px); max-width: 760px; height: auto; border: 0; box-shadow: none; border-radius: 0; background: transparent;"
@@ -51,4 +52,11 @@ I build custom physics solvers utilizing finite-difference methods (FDTD, FDFD),
   <figcaption style="margin-top: 0.75rem; color: var(--global-text-color-light); font-size: 0.9rem;">
     Full wave validation of grating coupler design for focusing.
   </figcaption>
+  <button
+    type="button"
+    onclick="const gif = document.getElementById('grating-coupler-gif'); gif.src = gif.src.split('?')[0] + '?replay=' + Date.now();"
+    style="margin-top: 0.75rem; padding: 0.4rem 0.8rem; border: 1px solid var(--global-divider-color); border-radius: 0.35rem; background: var(--global-bg-color); color: var(--global-text-color); cursor: pointer;"
+  >
+    Replay animation
+  </button>
 </figure>

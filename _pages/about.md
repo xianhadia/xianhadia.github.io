@@ -31,6 +31,8 @@ I build custom physics solvers utilizing finite-difference methods (FDTD, FDFD),
 
 **Keywords:** Nanophotonics · Inverse Design · Adjoint Optimization · Computational Electromagnetics · Surrogate Models · Scientific Computing
 
+Here are some of my [projects]({{ '/projects/' | relative_url }}). Click on **projects** to see more.
+
 <figure style="margin: 2.5rem 0 1.5rem; text-align: center;">
   <img
     src="{{ '/assets/img/em_simulation.jpg' | relative_url }}"

@@ -31,7 +31,54 @@ I build custom physics solvers utilizing finite-difference methods (FDTD, FDFD),
 
 **Keywords:** Nanophotonics · Inverse Design · Adjoint Optimization · Computational Electromagnetics · Surrogate Models · Scientific Computing
 
-Here are some of my [projects]({{ '/projects/' | relative_url }}). Click on **projects** to see more.
+## Metasurface inverse design hologram
+
+A Gaussian beam illuminates a 64 × 64 array of pillars. The uniform array starts with a single bright spot in the far field. As the pillar diameters change, they delay different parts of the wavefront by different amounts. The transmitted waves interfere to form the interlocking GT.
+
+<figure style="margin: 1.5rem 0; text-align: center;">
+  <picture>
+    <source
+      media="(prefers-reduced-motion: reduce)"
+      srcset="{{ '/assets/img/gt-metasurface-poster.png' | relative_url }}"
+    />
+    <img
+      id="gt-metasurface-gif"
+      src="{{ '/assets/img/gt-metasurface.gif' | relative_url }}"
+      width="1040"
+      height="638"
+      alt="Left, a uniform pillar array evolves into an array of varying diameters. Right, the simulated far-field intensity evolves from a Gaussian spot into the Georgia Tech GT logo."
+      style="display: block; width: 100%; height: auto; margin: 0 auto;"
+    />
+  </picture>
+  <figcaption style="margin-top: 0.75rem; color: var(--global-text-color-light); font-size: 0.9rem;">
+    Pillar geometry on the left and a zoomed view of the simulated far field on the right. The intensity color scale is fixed across frames and clips at its upper limit.
+  </figcaption>
+  <button
+    type="button"
+    onclick="const gif = document.getElementById('gt-metasurface-gif'); gif.parentElement.querySelector('source')?.remove(); gif.src = gif.src.split('?')[0] + '?replay=' + Date.now();"
+    style="margin-top: 0.75rem; padding: 0.4rem 0.8rem; border: 1px solid var(--global-divider-color); border-radius: 0.35rem; background: var(--global-bg-color); color: var(--global-text-color); cursor: pointer;"
+  >
+    Replay animation
+  </button>
+</figure>
+
+<figure style="margin: 2rem 0 1.5rem; text-align: center;">
+  <img
+    src="{{ '/assets/img/gt-metasurface-setup.png' | relative_url }}"
+    width="1040"
+    height="540"
+    loading="lazy"
+    alt="Three-dimensional schematic with a labeled Gaussian laser beam on the left, a metasurface pillar array in the middle, and the GT intensity pattern on a parallel focusing plane to the right."
+    style="display: block; width: 100%; height: auto; margin: 0 auto;"
+  />
+  <figcaption style="margin-top: 0.75rem; color: var(--global-text-color-light); font-size: 0.9rem;">
+    Schematic optical layout. The focusing plane shows the simulated far-field intensity, and the distances are illustrative.
+  </figcaption>
+</figure>
+
+The scalar model assigns each pillar a phase delay from an idealized, linear diameter-to-phase map. Relaxed Gerchberg–Saxton iterations alternate between the prescribed Gaussian input amplitude and the target far-field amplitude using forward and inverse FFTs. The optimizer allows some light to spill outside the displayed window so it can better match the target inside it. The model assumes unit transmission and independent pillars. [Georgia Tech logo reference](https://brand.gatech.edu/our-look/logos)
+
+Here are some of my [projects]({{ '/projects/' | relative_url }}). The individual project pages are under construction.
 
 <figure style="margin: 2.5rem 0 1.5rem; text-align: center;">
   <img
@@ -42,23 +89,4 @@ Here are some of my [projects]({{ '/projects/' | relative_url }}). Click on **pr
   <figcaption style="margin-top: 0.75rem; color: var(--global-text-color-light); font-size: 0.9rem;">
     Helmholtz equation, \(\nabla^2 \mathbf{E} + k^2 \mathbf{E} = 0\), and visualization with lateral boundary conditions.
   </figcaption>
-</figure>
-
-<figure style="margin: 1.5rem 0 2.5rem; text-align: center;">
-  <img
-    id="grating-coupler-gif"
-    src="{{ '/assets/focusing_grating_demo.gif' | relative_url }}"
-    alt="FDTD visualization of a grating coupler"
-    style="display: inline-block; width: min(100%, 760px); max-width: 760px; height: auto; border: 0; box-shadow: none; border-radius: 0; background: transparent;"
-  />
-  <figcaption style="margin-top: 0.75rem; color: var(--global-text-color-light); font-size: 0.9rem;">
-    Full wave validation of grating coupler design for focusing.
-  </figcaption>
-  <button
-    type="button"
-    onclick="const gif = document.getElementById('grating-coupler-gif'); gif.src = gif.src.split('?')[0] + '?replay=' + Date.now();"
-    style="margin-top: 0.75rem; padding: 0.4rem 0.8rem; border: 1px solid var(--global-divider-color); border-radius: 0.35rem; background: var(--global-bg-color); color: var(--global-text-color); cursor: pointer;"
-  >
-    Replay animation
-  </button>
 </figure>

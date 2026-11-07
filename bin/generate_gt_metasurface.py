@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the GT hologram GIF, poster, and optical setup with NumPy and Pillow.
+"""Render the GT hologram GIF, poster, slider frames, and optical setup with NumPy and Pillow.
 
 Rasterize Georgia Tech's public logo SVG at its intrinsic size, then run:
 
@@ -245,6 +245,16 @@ def main():
     frames[-1].save(output.with_name("gt-metasurface-poster.png"), optimize=True)
     setup = optical_setup(states[-1][1], final_intensity, field_scale)
     setup.save(output.with_name("gt-metasurface-setup.png"), optimize=True)
+
+    # Pack the same captures into a sheet that the homepage loads on first scrub.
+    columns = 5
+    width, height = 780, 478
+    rows = (len(frames) + columns - 1) // columns
+    sheet = Image.new("RGBA", (columns * width, rows * height))
+    for index, image in enumerate(frames):
+        tile = image.resize((width, height), Image.Resampling.LANCZOS)
+        sheet.paste(tile, ((index % columns) * width, (index // columns) * height))
+    sheet.save(output.parent.parent / "gt-metasurface-frames.webp", quality=88, method=4)
 
     # A shared palette keeps stationary colors stable across GIF frames.
     samples = Image.new("RGB", (260, 160 * len(frames)))

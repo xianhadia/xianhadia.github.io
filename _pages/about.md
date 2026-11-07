@@ -48,9 +48,33 @@ One of my primary research goals is to develop efficient numerical methods and p
   </figcaption>
 </figure>
 
-## Metasurface inverse design hologram
+One of the primary motivations for developing fast, approximate, yet physically grounded solvers of Maxwell's equations is not only to simulate electromagnetic phenomena, but also to **design devices that exhibit a desired electromagnetic response**.
 
-A Gaussian beam illuminates a 64 × 64 array of pillars. The uniform array starts with a single bright spot in the far field. As the pillar diameters change, they delay different parts of the wavefront by different amounts. The transmitted waves interfere to form the interlocking GT.
+Consider a metasurface: an optical device composed of subwavelength structures that manipulate the amplitude, phase, or polarization of light. Despite their relatively small physical dimensions, these devices can possess extraordinarily large design spaces. For example, a circular metasurface just 1 mm in diameter, consisting of individually tunable nanostructures arranged on a 400 nm lattice, could have nearly **five million independent design parameters**.
+
+This raises a fundamental computational question: **How can we efficiently search a design space containing millions of degrees of freedom?**
+
+One approach is to formulate the engineering task as a mathematical optimization problem. We begin by defining an _objective function_ that quantifies how closely a device's electromagnetic response matches its intended behavior. The geometry and material properties of the device become the design variables, and the goal is to iteratively update these parameters to improve the objective.
+
+Mathematically, this can be expressed as
+
+$$
+\min_{\boldsymbol{\theta}}\; \mathcal{L}\left(\mathbf{E}(\boldsymbol{\theta}), \boldsymbol{\theta}\right)
+$$
+
+subject to Maxwell's equations, where \\(\boldsymbol{\theta}\\) represents the device's design parameters, \\(\mathbf{E}\\) is the resulting electromagnetic field, and \\(\mathcal{L}\\) measures the discrepancy between the simulated and desired performance.
+
+However, directly computing the sensitivity of the objective to millions of parameters through finite differences would be prohibitively expensive, potentially requiring millions of additional electromagnetic simulations per optimization iteration.
+
+This is where **adjoint optimization** becomes particularly powerful.
+
+Rather than perturbing each design parameter individually, the adjoint method exploits the mathematical structure of the governing equations to compute the gradient of a scalar objective with respect to _all_ design parameters using just two electromagnetic solves: one forward simulation and one adjoint simulation.
+
+Remarkably, the number of required solves does not grow with the number of design parameters. Whether a metasurface has hundreds or millions of geometric variables, the entire gradient can be obtained from these two solves, under the appropriate assumptions.
+
+This connection between electromagnetic physics, numerical simulation, and gradient-based optimization is what makes inverse design such an interesting problem at the intersection of **applied mathematics, physics, and scientific computing**.
+
+The animation below illustrates this process for a metasurface hologram, where the device's geometry is iteratively optimized to produce a desired optical field distribution. Use the slider to see how the design converges at a set iteration.
 
 <figure style="margin: 1.5rem 0; text-align: center;">
   <picture id="gt-metasurface-playback">
@@ -77,11 +101,11 @@ A Gaussian beam illuminates a 64 × 64 array of pillars. The uniform array start
     hidden
   ></canvas>
   <figcaption style="margin-top: 0.75rem; color: var(--global-text-color-light); font-size: 0.9rem;">
-    Pillar geometry on the left and a zoomed view of the simulated far field on the right. The intensity color scale is fixed across frames and clips at its upper limit.
+    Pillar geometry on the left and a zoomed view of the simulated far field on the right. This phase-only demo uses Gerchberg–Saxton iterations. The intensity color scale is fixed across frames and clips at its upper limit.
   </figcaption>
   <div id="gt-metasurface-scrubber" style="margin: 0.75rem auto 0; max-width: 28rem;" hidden>
     <label for="gt-metasurface-iteration">Optimization iteration</label>
-    <input id="gt-metasurface-iteration" type="range" min="0" max="36" value="36" style="display: block; width: 100%;" />
+    <input id="gt-metasurface-iteration" type="range" min="0" max="36" value="36" style="display: block; width: 100%; accent-color: #c34c75;" />
     <output id="gt-metasurface-step" for="gt-metasurface-iteration">160 / 160</output>
   </div>
   <button

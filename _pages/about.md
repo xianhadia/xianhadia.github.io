@@ -31,7 +31,7 @@ I develop **high-fidelity, computationally efficient electromagnetic solvers** t
 
 A central goal of my research is **bridging the gap between numerical simulation and physical realization**. Beyond computational methods, I have hands-on experience in photonic device fabrication, optical metrology, experimental characterization, and automation. I have taken photonic designs through the complete workflow, from numerical simulation and optimization to fabrication and experimental validation.
 
-See my recent publications on [Google Scholar](https://scholar.google.com/citations?user=faPctLoAAAAJ&hl=en). Many are available on arXiv.
+See my recent publications on [Google Scholar](https://scholar.google.com/citations?user=faPctLoAAAAJ&hl=en).
 
 **Research Keywords:** Photonics, Computational Electromagnetics, Inverse Design, Adjoint Optimization, Scientific Computing
 

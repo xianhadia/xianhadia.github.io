@@ -91,7 +91,7 @@ The interactive demonstration below illustrates iterative metasurface design for
     hidden
   ></canvas>
   <figcaption style="margin-top: 0.75rem; color: var(--global-text-color-light); font-size: 0.9rem;">
-    Pillar geometry on the left and a zoomed view of the simulated far field on the right. This phase-only demo uses Gerchberg–Saxton iterations. The intensity color scale is fixed across frames and clips at its upper limit.
+    Colors on the left show the pillar diameters. The right panel shows the resulting intensity in the focal plane.
   </figcaption>
   <div id="gt-metasurface-scrubber" style="margin: 0.75rem auto 0; max-width: 28rem;" hidden>
     <label for="gt-metasurface-iteration">Optimization iteration</label>
@@ -119,7 +119,7 @@ The interactive demonstration below illustrates iterative metasurface design for
     style="display: block; width: 100%; height: auto; margin: 0 auto;"
   />
   <figcaption style="margin-top: 0.75rem; color: var(--global-text-color-light); font-size: 0.9rem;">
-    Schematic optical layout. The focusing plane shows the simulated far-field intensity, and the distances are illustrative.
+    In the intended setup, a laser provides coherent, monochromatic, linearly polarized illumination. The metasurface modulates the wavefront to form a hologram.
   </figcaption>
 </figure>
 

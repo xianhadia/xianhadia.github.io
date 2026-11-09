@@ -124,7 +124,3 @@ The interactive demonstration below illustrates iterative metasurface design for
     In the intended setup, a laser provides coherent, monochromatic, linearly polarized illumination. The metasurface modulates the wavefront to form a hologram.
   </figcaption>
 </figure>
-
-The scalar model assigns each pillar a phase delay from an idealized, linear diameter-to-phase map. Relaxed Gerchberg–Saxton iterations alternate between the prescribed Gaussian input amplitude and the target far-field amplitude using forward and inverse FFTs. The optimizer allows some light to spill outside the displayed window so it can better match the target inside it. The model assumes unit transmission and independent pillars. [Georgia Tech logo reference](https://brand.gatech.edu/our-look/logos)
-
-Here are some of my [projects]({{ '/projects/' | relative_url }}). The individual project pages are under construction.

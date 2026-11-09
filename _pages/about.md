@@ -35,50 +35,36 @@ A central goal of my research is **bridging the gap between numerical simulation
 
 <div aria-hidden="true" style="height: 1.5rem;"></div>
 
-Here is a glimpse into what I do. Much of my work involves modeling and solving partial differential equations (PDEs) under various boundary conditions and across complex geometries - most notably, Maxwell's equations, which govern electromagnetic phenomena.
+Here's some of what I do:
 
-My research lies at the intersection of numerical methods, physics, and scientific computing. Classical electromagnetism is one of the most thoroughly understood areas of physics, yet efficiently solving Maxwell's equations across complex geometries, material configurations, and operating conditions remains a significant computational challenge. While the underlying physics is well established, translating these equations into practical engineering design tools requires increasingly sophisticated computational methods.
+Much of my work involves solving partial differential equations (PDEs) across complex geometries, materials, and boundary conditions—most notably, Maxwell's equations, which govern electromagnetic phenomena.
 
-One of my primary research goals is to develop efficient numerical methods and physics-based surrogate models that balance computational cost with the appropriate level of physical fidelity, enabling faster simulation, optimization, and inverse design of complex engineering systems.
+Although electromagnetism is well understood theoretically, accurately and efficiently solving Maxwell's equations for complex, high-dimensional photonic systems remains a significant computational challenge. This shifts modern photonic engineering from a problem of physics to **numerical methods and scientific computing**.
+
+My research focuses on developing **efficient electromagnetic solvers and physics-based surrogate models** that balance computational cost with physical fidelity, enabling scalable simulation, optimization, and inverse design.
 
 <figure style="margin: 2.5rem 0 1.5rem; text-align: center;">
   <img
     src="{{ '/assets/img/em_simulation.jpg' | relative_url }}"
-    alt="Electromagnetic simulation"
+    alt="Full-wave finite-element simulation of an electromagnetic eigenmode"
     style="display: inline-block; width: min(100%, 760px); max-width: 760px; height: auto; border: 0; box-shadow: none; border-radius: 0; background: transparent;"
   />
   <figcaption style="margin-top: 0.75rem; color: var(--global-text-color-light); font-size: 0.9rem;">
-    Helmholtz equation, \(\nabla^2 \mathbf{E} + k^2 \mathbf{E} = 0\), and visualization with lateral boundary conditions.
+    Full-wave finite-element simulation of an electromagnetic eigenmode, used as reference data for training and evaluating a physics-based surrogate model.
   </figcaption>
 </figure>
 
-One of the primary motivations for developing fast, approximate, yet physically grounded solvers of Maxwell's equations is not only to simulate electromagnetic phenomena, but also to **design devices that exhibit a desired electromagnetic response**.
+Beyond simulating electromagnetic phenomena, a central goal of my research is to **design photonic devices with prescribed optical responses**.
 
-Consider a metasurface: an optical device composed of subwavelength structures that manipulate the amplitude, phase, or polarization of light. Despite their relatively small physical dimensions, these devices can possess extraordinarily large design spaces. For example, a circular metasurface just 1 mm in diameter, consisting of individually tunable nanostructures arranged on a 400 nm lattice, could have nearly **five million independent design parameters**.
+Consider a metasurface composed of subwavelength nanostructures that manipulate light. Even a device just 1 mm in diameter, with individually tunable structures on a 400 nm period, can contain nearly **five million design parameters**. How do you even begin to search through this enormous design space?
 
-This raises a fundamental computational question: **How can we efficiently search a design space containing millions of degrees of freedom?**
+**Inverse design** addresses this challenge by formulating the desired engineering function as a mathematical optimization problem. Rather than manually adjusting device geometries, we iteratively optimize their design parameters to maximize a chosen performance objective.
 
-One approach is to formulate the engineering task as a mathematical optimization problem. We begin by defining an _objective function_ that quantifies how closely a device's electromagnetic response matches its intended behavior. The geometry and material properties of the device become the design variables, and the goal is to iteratively update these parameters to improve the objective.
+One particularly powerful approach is **adjoint optimization**, which enables the gradient of a scalar objective with respect to millions of design parameters to be computed using just two electromagnetic solves: one forward and one adjoint, under appropriate assumptions.
 
-Mathematically, this can be expressed as
+Combined with high-performance electromagnetic solvers, this makes the optimization of otherwise computationally prohibitive photonic devices tractable.
 
-$$
-\min_{\boldsymbol{\theta}}\; \mathcal{L}\left(\mathbf{E}(\boldsymbol{\theta}), \boldsymbol{\theta}\right)
-$$
-
-subject to Maxwell's equations, where \\(\boldsymbol{\theta}\\) represents the device's design parameters, \\(\mathbf{E}\\) is the resulting electromagnetic field, and \\(\mathcal{L}\\) measures the discrepancy between the simulated and desired performance.
-
-However, directly computing the sensitivity of the objective to millions of parameters through finite differences would be prohibitively expensive, potentially requiring millions of additional electromagnetic simulations per optimization iteration.
-
-This is where **adjoint optimization** becomes particularly powerful.
-
-Rather than perturbing each design parameter individually, the adjoint method exploits the mathematical structure of the governing equations to compute the gradient of a scalar objective with respect to _all_ design parameters using just two electromagnetic solves: one forward simulation and one adjoint simulation.
-
-Remarkably, the number of required solves does not grow with the number of design parameters. Whether a metasurface has hundreds or millions of geometric variables, the entire gradient can be obtained from these two solves, under the appropriate assumptions.
-
-This connection between electromagnetic physics, numerical simulation, and gradient-based optimization is what makes inverse design such an interesting problem at the intersection of **applied mathematics, physics, and scientific computing**.
-
-The animation below illustrates this process for a metasurface hologram, where the device's geometry is iteratively optimized to produce a desired optical field distribution. Use the slider to see how the design converges at a set iteration.
+The interactive demonstration below illustrates iterative metasurface design for optical wavefront shaping.
 
 <figure style="margin: 1.5rem 0; text-align: center;">
   <picture id="gt-metasurface-playback">

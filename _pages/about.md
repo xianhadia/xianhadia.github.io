@@ -25,11 +25,15 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a Ph.D. candidate in Computational Science and Engineering at <a href='https://gatech.edu/'>Georgia Tech</a>, advised by [Prof. Raphaël Pestourie](https://scholar.google.com/citations?user=Lxv3W74AAAAJ&hl=en), specializing in large-scale inverse design for nanophotonics. My research focuses on developing high-performance computational frameworks to solve complex electromagnetic inverse problems, bridging adjoint-based optimization, data-driven surrogate modeling, and scalable numerical solvers.
+I am a Ph.D. candidate in [Computational Science and Engineering at Georgia Tech](https://cse.gatech.edu/), advised by [Prof. Raphaël Pestourie](https://rpestourie.github.io/). My research lies at the intersection of **computational electromagnetics, inverse design, and photonic engineering**, with an emphasis on developing high-performance computational frameworks for solving complex electromagnetic design problems.
 
-I build custom physics solvers utilizing finite-difference methods (FDTD, FDFD), finite element methods (FEM), and rigorous coupled-wave analysis (RCWA), alongside tools like Tidy3D, MEEP, COMSOL, and Ansys Lumerical. To make large-area nanophotonic device optimization computationally tractable, I architect high-performance computing (HPC) workflows that leverage multi-GPU parallelization, domain decomposition, and tensor-based linear algebra formulations. Beyond theoretical and algorithmic development, I bridge simulation with hardware by designing fabrication-constrained metasurfaces—for beamforming, focusing, and arbitrary wavefront engineering—and validating them via hands-on cleanroom lithography, optical metrology, and experimental bench characterization.
+I develop **high-fidelity, computationally efficient electromagnetic solvers** to enable **scalable inverse design** of photonic devices under practical fabrication constraints. My work combines adjoint-based optimization, data-driven surrogate modeling, and high-performance computing to make the optimization of high-dimensional electromagnetic systems computationally tractable.
 
-**Keywords:** Nanophotonics · Inverse Design · Adjoint Optimization · Computational Electromagnetics · Surrogate Models · Scientific Computing
+A central goal of my research is **bridging the gap between numerical simulation and physical realization**. Beyond computational methods, I have hands-on experience in photonic device fabrication, optical metrology, experimental characterization, and automation. I have taken photonic designs through the complete workflow, from numerical simulation and optimization to fabrication and experimental validation.
+
+**Research Keywords:** Photonics, Computational Electromagnetics, Inverse Design, Adjoint Optimization, Scientific Computing
+
+<div aria-hidden="true" style="height: 1.5rem;"></div>
 
 Here is a glimpse into what I do. Much of my work involves modeling and solving partial differential equations (PDEs) under various boundary conditions and across complex geometries - most notably, Maxwell's equations, which govern electromagnetic phenomena.
 
